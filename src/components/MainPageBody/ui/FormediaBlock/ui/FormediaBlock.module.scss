@@ -1,0 +1,49 @@
+.container{
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.mainTextBlock{
+  width: 755px;
+  height: 174px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .mainText{
+    font-family: Inter;
+    font-size: 128px;
+    font-weight: 400;
+    line-height: 128px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+  .secondaryText{
+    font-family: Inter;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+  }
+}
+
+.secondaryTextBlock{
+  width: 595px;
+  height: 146px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .thirdlyText{
+    font-family: Inter;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29.05px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+  }
+}

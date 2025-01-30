@@ -1,0 +1,46 @@
+.projectsList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.card {
+  width: calc(50% - 10px);
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.imageWrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  margin-top: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.secondaryText {
+  font-size: 14px;
+  color: #666;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.linksList a {
+  color: #0070f3;
+  text-decoration: none;
+  margin-right: 10px;
+}
