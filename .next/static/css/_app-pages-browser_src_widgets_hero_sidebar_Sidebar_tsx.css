@@ -1,0 +1,147 @@
+/*!********************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/shared/ui/Arrow/arrow.module.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************/
+.arrow_svg__1UJLu{
+    flex-shrink: 0;
+    fill: var(--color-1);
+}
+/*!***************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./src/widgets/hero/sidebar/sidebar.module.css ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************/
+.sidebar_aside__qocfF {
+  max-width: 274px;
+  max-height: 390px;
+  margin-bottom: 13px;
+  overflow-y: scroll;
+  padding-right: 15px;
+
+  --mask: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 0,
+      rgba(0, 0, 0, 1) 77%,
+      rgba(0, 0, 0, 0) 95%,
+      rgba(0, 0, 0, 0) 0
+    )
+    100% 50% / 100% 100% repeat-x;
+
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+}
+
+.sidebar_aside__qocfF::-webkit-scrollbar {
+  width: 2px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.sidebar_aside__qocfF::-webkit-scrollbar-track {
+  background-color: white;
+}
+
+.sidebar_aside__qocfF::-webkit-scrollbar-thumb {
+  background-color: var(--color-1);
+  opacity: 0.3;
+  border-radius: 10px;
+}
+
+.sidebar_list__LI7ie {
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+  /* height: 4em; */
+  /* min-height: 410px; */
+}
+
+.sidebar_list__item__PWU8S {
+  gap: 11px;
+  display: flex;
+  align-items: baseline;
+  /* background-color: pink; */
+}
+
+.sidebar_list__item__PWU8S svg {
+  flex-shrink: 0;
+}
+
+.sidebar_list__link__t9oiP {
+  color: #000;
+  text-overflow: ellipsis;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16.8px;
+  transition: 0.65s ease;
+}
+
+.sidebar_list__link__t9oiP:hover {
+  color: var(--color-1);
+}
+
+.sidebar_aside__item__LS_JY {
+  display: none;
+  column-gap: 11px;
+  color: var(--color-1);
+
+  text-overflow: ellipsis;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16.8px;
+  transition: 0.65s ease;
+}
+.sidebar_aside__item__LS_JY svg {
+  transform: rotate(90deg);
+}
+
+.sidebar_aside__item__LS_JY a {
+  color: var(--color-1);
+}
+
+.sidebar_space__pQFgA {
+  margin-bottom: 55px;
+}
+
+@media (max-width: 1024px) {
+  .sidebar_aside__qocfF {
+    max-width: 528px;
+    /* max-height: 266px; */
+    margin-bottom: 0;
+  }
+  .sidebar_list__LI7ie {
+    gap: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* .aside{
+        display: none;
+    } */
+  .sidebar_aside__qocfF {
+    max-width: 100%;
+    margin-bottom: 35px;
+  }
+  .sidebar_list__LI7ie {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar_aside__qocfF {
+    max-height: 100%;
+    overflow: hidden;
+    -webkit-mask: none;
+            mask: none;
+  }
+
+  .sidebar_space__pQFgA {
+    display: none;
+  }
+  /* .nav {
+    margin-bottom: 14px;
+  } */
+  .sidebar_aside__item__LS_JY {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
