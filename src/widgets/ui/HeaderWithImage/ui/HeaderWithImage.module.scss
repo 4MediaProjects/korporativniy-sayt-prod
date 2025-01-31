@@ -1,0 +1,23 @@
+.container {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.image {
+  width: 100vw;
+  height: auto;
+  display: block;
+}
+
+.title {
+  position: absolute;
+  bottom: 100px;
+  left: 140px;
+  font-family: Inter, sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 77.45px;
+  color: white;
+}

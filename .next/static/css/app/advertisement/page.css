@@ -1,0 +1,131 @@
+/*!**************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[7].use[3]!./app/advertisement/advertisement.module.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************/
+.advertisement_container__RN08D {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
+
+.advertisement_textData___mG9B {
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    z-index: 11;
+    @media (max-width: 768px) {
+        gap: 40px;
+        padding: 0 20px;
+    }
+}
+
+.advertisement_mainInformation__whqHV {
+    width: 562px;
+    height: auto;
+    padding: 37px 50px;
+    text-align: left;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.advertisement_h1__E4PAQ {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+
+    @media (max-width: 768px) {
+        font-size: 32px;
+        line-height: 38px;
+    }
+}
+
+.advertisement_mainInformationText__JWRtS {
+    margin: 20px 0;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.6px;
+    width: 600px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        font-size: 16px;
+        line-height: 20px;
+    }
+}
+
+.advertisement_button__oUCJK {
+    height: 50px;
+    max-width: 395px;
+    padding: 16px 44px;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    background: var(--color-1);
+
+    @media (max-width: 768px) {
+        width: 100%;
+        max-width: none;
+        padding: 14px;
+        font-size: 16px;
+    }
+}
+
+.advertisement_secondaryInformation__86utF {
+    width: 389px;
+    height: auto;
+    padding: 37px 50px;
+    margin-bottom: 40px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.advertisement_advertisementDistrict__om1A4 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 28.8px;
+    margin: 30px 0;
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+        line-height: 24px;
+        margin: 20px 0;
+    }
+}
+
+.advertisement_contactData__TaXUE {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28.8px;
+    margin-bottom: 15px;
+
+    @media (max-width: 768px) {
+        font-size: 20px;
+        line-height: 24px;
+    }
+}
+
+.advertisement_image__pwMbP {
+    position: absolute;
+    left: 270px;
+    top: -30px;
+    z-index: 10;
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+}
+
