@@ -1,9 +1,10 @@
 import styles from '../../shared/cityPage.module.scss';
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 export const JivemVNijnemInfoPortal = () => {
     const [isMobile, setIsMobile] = useState(false);
 
+    const navigate = useNavigate();
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
@@ -20,15 +21,15 @@ export const JivemVNijnemInfoPortal = () => {
                 <img
                     src={
                         isMobile
-                            ? 'jivemVNijnemBackGroundMobile.svg'
-                            : 'jivemVNijnemBackGround.svg'
+                            ? '/jivemVNijnemBackGroundMobile.svg'
+                            : '/jivemVNijnemBackGround.svg'
                     }
                     alt="jivemVNijnem"
                     className={styles.headerImage}
                 />
                 <div className={styles.headerOverlay}>
                     <img
-                        src="jivemVnijnem.svg"
+                        src="/jivemVnijnem.svg"
                         alt="jivemVNijnem"
                         className={styles.imageTitle}
                     />
@@ -37,18 +38,24 @@ export const JivemVNijnemInfoPortal = () => {
             </div>
 
             <div className={styles.linksListContainer}>
-                <Link
-                    to="/nijniy-novgorod/info-portal"
+                <button
                     className={`${styles.link} ${styles.active}`}
+                    onClick={() => navigate('/nijniy-novgorod/info-portal')}
                 >
                     Информационный портал
-                </Link>
-                <Link to="/nijniy-novgorod/tg-channel" className={styles.link}>
+                </button>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/nijniy-novgorod/tg-channel')}
+                >
                     Телеграм-канал
-                </Link>
-                <Link to="/nijniy-novgorod/vk-group" className={styles.link}>
+                </button>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/nijniy-novgorod/vk-group')}
+                >
                     Группа ВК
-                </Link>
+                </button>
             </div>
             <div className={styles.contentContainer}>
                 <div className={styles.cardImageButtonsContainer}>
@@ -56,7 +63,7 @@ export const JivemVNijnemInfoPortal = () => {
                         Информационный потал «Живем в Нижнем»
                     </div>
                     <img
-                        src={`jivemVNijnemInfoPortal.svg`}
+                        src={`/jivemVNijnemInfoPortal.svg`}
                         alt="jivemVNijnemInfoPortal"
                         className={styles.image}
                     />

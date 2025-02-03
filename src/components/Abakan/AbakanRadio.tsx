@@ -1,9 +1,11 @@
 import styles from '../../shared/cityPage.module.scss';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const AbakanRadio = () => {
     const [isMobile, setIsMobile] = useState(false);
 
+    const navigate = useNavigate();
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
@@ -19,7 +21,9 @@ export const AbakanRadio = () => {
             <div className={styles.headerContainer}>
                 <img
                     src={
-                        isMobile ? 'blankBackground.svg' : 'blankBackground.svg'
+                        isMobile
+                            ? '/blankBackground.svg'
+                            : '/blankBackground.svg'
                     }
                     alt="blankBackground"
                     className={styles.headerImage}
@@ -30,12 +34,40 @@ export const AbakanRadio = () => {
             </div>
 
             <div className={styles.linksListContainer}>
-                <button className={styles.link}>Информационный портал</button>
-                <button className={styles.link}>Телеграм-канал</button>
-                <button className={styles.link}>Группа ВК</button>
-                <button className={styles.link}>Телеканал ТВ7</button>
-                <button className={styles.link}>Программа NotaBene</button>
-                <button className={`${styles.link} ${styles.active}`}>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/abakan/info-portal')}
+                >
+                    Информационный портал
+                </button>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/abakan/tg-channel')}
+                >
+                    Телеграм-канал
+                </button>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/abakan/vk-group')}
+                >
+                    Группа ВК
+                </button>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/abakan/tv')}
+                >
+                    Телеканал ТВ7
+                </button>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/abakan/notabene')}
+                >
+                    Программа NotaBene
+                </button>
+                <button
+                    className={`${styles.link} ${styles.active}`}
+                    onClick={() => navigate('/abakan/radio')}
+                >
                     Радио «Сибирь»
                 </button>
             </div>
@@ -45,7 +77,7 @@ export const AbakanRadio = () => {
                         Радио «Сибирь»
                     </div>
                     <img
-                        src={`blankImage.svg`}
+                        src={`/blankImage.svg`}
                         alt="blankImage"
                         className={styles.image}
                     />

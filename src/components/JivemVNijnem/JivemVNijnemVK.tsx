@@ -1,8 +1,10 @@
 import styles from '../../shared/cityPage.module.scss';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 export const JivemVNijnemVK = () => {
     const [isMobile, setIsMobile] = useState(false);
 
+    const navigate = useNavigate();
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
@@ -19,15 +21,15 @@ export const JivemVNijnemVK = () => {
                 <img
                     src={
                         isMobile
-                            ? 'jivemVNijnemBackGroundMobile.svg'
-                            : 'jivemVNijnemBackGround.svg'
+                            ? '/jivemVNijnemBackGroundMobile.svg'
+                            : '/jivemVNijnemBackGround.svg'
                     }
                     alt="jivemVNijnem"
                     className={styles.headerImage}
                 />
                 <div className={styles.headerOverlay}>
                     <img
-                        src="jivemVnijnem.svg"
+                        src="/jivemVnijnem.svg"
                         alt="jivemVNijnem"
                         className={styles.imageTitle}
                     />
@@ -36,9 +38,22 @@ export const JivemVNijnemVK = () => {
             </div>
 
             <div className={styles.linksListContainer}>
-                <button className={styles.link}>Информационный портал</button>
-                <button className={styles.link}>Телеграм-канал</button>
-                <button className={`${styles.link} ${styles.active}`}>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/nijniy-novgorod/info-portal')}
+                >
+                    Информационный портал
+                </button>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/nijniy-novgorod/tg-channel')}
+                >
+                    Телеграм-канал
+                </button>
+                <button
+                    className={`${styles.link} ${styles.active}`}
+                    onClick={() => navigate('/nijniy-novgorod/vk-group')}
+                >
                     Группа ВК
                 </button>
             </div>
@@ -48,7 +63,7 @@ export const JivemVNijnemVK = () => {
                         Группа ВК «Живем в Нижнем»
                     </div>
                     <img
-                        src={`JivemVNijnemVK.svg`}
+                        src={`/JivemVNijnemVK.svg`}
                         alt="JivemVNijnemVK"
                         className={styles.image}
                     />

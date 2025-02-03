@@ -1,9 +1,11 @@
 import styles from '../../shared/cityPage.module.scss';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 export const AchinskTV = () => {
     const [isMobile, setIsMobile] = useState(false);
 
+    const navigate = useNavigate();
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
@@ -19,7 +21,9 @@ export const AchinskTV = () => {
             <div className={styles.headerContainer}>
                 <img
                     src={
-                        isMobile ? 'blankBackground.svg' : 'blankBackground.svg'
+                        isMobile
+                            ? '/blankBackground.svg'
+                            : '/blankBackground.svg'
                     }
                     alt="blankBackground"
                     className={styles.headerImage}
@@ -30,7 +34,10 @@ export const AchinskTV = () => {
             </div>
 
             <div className={styles.linksListContainer}>
-                <button className={`${styles.link} ${styles.active}`}>
+                <button
+                    className={`${styles.link} ${styles.active}`}
+                    onClick={() => navigate('/achinsk/tv')}
+                >
                     Телеканал АТВ
                 </button>
             </div>

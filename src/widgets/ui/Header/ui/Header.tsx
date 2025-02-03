@@ -1,17 +1,35 @@
-import styles from  './Header.module.scss'
+import styles from './Header.module.scss';
+import { useNavigate } from 'react-router-dom';
 
-const navLinks = [{text:"Проекты холдинга", link:'#'},{text:"О холдинге", link:'#'},{text:"Продакшен", link:'#'},{text:"Вакансии", link:'#'},{text:"Контакты", link:'#'}]
 export const Header = () => {
+    const navigate = useNavigate();
     return (
         <header className={styles.header}>
-            <img src="/logo.svg" alt="Logo" className={styles.logo} />
+            <img
+                src="/logo.svg"
+                alt="Logo"
+                className={styles.logo}
+                onClick={() => navigate('/')}
+            />
             <div className={styles.linkContainer}>
                 <div className={styles.links}>
-                    {navLinks.map((item, i) => (
-                        <div key={i}><a href={item.link}>{item.text}</a></div>
-                    ))}
+                    <div>
+                        <a href="">Проекты холдинга</a>
+                    </div>
+                    <div>
+                        <a href="">О холдинге</a>
+                    </div>
+                    <div>
+                        <a href="">Продакшен</a>
+                    </div>
+                    <div>
+                        <a href="">Вакансии</a>
+                    </div>
+                    <div>
+                        <a href="">Контакты</a>
+                    </div>
                 </div>
             </div>
         </header>
     );
-}
+};

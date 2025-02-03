@@ -1,8 +1,10 @@
 import styles from '../../shared/cityPage.module.scss';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 export const BratskInfoPortal = () => {
     const [isMobile, setIsMobile] = useState(false);
 
+    const navigate = useNavigate();
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
@@ -19,8 +21,8 @@ export const BratskInfoPortal = () => {
                 <img
                     src={
                         isMobile
-                            ? 'bratskBackground.svg'
-                            : 'bratskBackground.svg'
+                            ? '/bratskBackground.svg'
+                            : '/bratskBackground.svg'
                     }
                     alt="jivemVNijnem"
                     className={styles.headerImage}
@@ -31,23 +33,72 @@ export const BratskInfoPortal = () => {
             </div>
 
             <div className={styles.linksListContainer}>
-                <button className={`${styles.link} ${styles.active}`}>
+                <button
+                    className={`${styles.link} ${styles.active}`}
+                    onClick={() => navigate('/bratsk/info-portal')}
+                >
                     Информационный портал
                 </button>
-                <button className={styles.link}>Телеграм-канал</button>
-                <button className={styles.link}>Группа ВК</button>
-                <button className={styles.link}>Телеканал «БСТ 24»</button>
-                <button className={styles.link}>Телеканал СТС</button>
-                <button className={styles.link}>Телеканал Домашний</button>
-                <button className={styles.link}>Телеканал ТВЦ</button>
-                <button className={styles.link}>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/bratsk/tg-channel')}
+                >
+                    Телеграм-канал
+                </button>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/bratsk/vk-group')}
+                >
+                    Группа ВК
+                </button>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/bratsk/bratsk-24')}
+                >
+                    Телеканал «БСТ 24»
+                </button>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/bratsk/sts')}
+                >
+                    Телеканал СТС
+                </button>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/bratsk/domashniy')}
+                >
+                    Телеканал Домашний
+                </button>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/bratsk/tvc')}
+                >
+                    Телеканал ТВЦ
+                </button>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/bratsk/evropa-plus')}
+                >
                     Радио «Европа плюс Братск»
                 </button>
-                <button className={styles.link}>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/bratsk/shanson')}
+                >
                     Радио «Шансон в Братске»
                 </button>
-                <button className={styles.link}>Радио «Юмор FM»</button>
-                <button className={styles.link}>Радио «Пи FM»</button>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/bratsk/umorfm')}
+                >
+                    Радио «Юмор FM»
+                </button>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/bratsk/pifm')}
+                >
+                    Радио «Пи FM»
+                </button>
             </div>
             <div className={styles.contentContainer}>
                 <div className={styles.cardImageButtonsContainer}>
@@ -55,7 +106,7 @@ export const BratskInfoPortal = () => {
                         Информационный портал «БСТ»
                     </div>
                     <img
-                        src={`blankImage.svg`}
+                        src={`/blankImage.svg`}
                         alt="blankImage"
                         className={styles.image}
                     />

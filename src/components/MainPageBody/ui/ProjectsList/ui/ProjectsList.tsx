@@ -22,6 +22,7 @@ export const ProjectsList = ({ projects }: IProjectsListProps) => {
                         <div className={styles.imageWrapper}>
                             {project.imageName && (
                                 <img
+                                    className={styles.img}
                                     src={`/${project.imageName}.svg`}
                                     alt={project.header}
                                 />
@@ -45,9 +46,13 @@ export const ProjectsList = ({ projects }: IProjectsListProps) => {
                                         </a>
                                     ))}
                                 </div>
-                                <ButtonList
-                                    reverseOrangeButton={project.buttonText}
-                                />
+                                <div className={styles.buttonList}>
+                                    <button
+                                        className={styles.reverseOrangeButton}
+                                    >
+                                        Подробнее
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>

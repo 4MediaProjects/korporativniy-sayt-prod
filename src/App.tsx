@@ -33,7 +33,8 @@ import { AbakanNotaBene } from './components/Abakan/AbakanNotaBene';
 import { AbakanRadio } from './components/Abakan/AbakanRadio';
 import { AchinskTV } from './components/Achinsk/AchinskTV';
 import { JivemVNijnemInfoPortal } from './components/JivemVNijnem/JivemVNijnemInfoPortal';
-import { Route, Router, Routes } from 'react-router-dom';
+import { Navigate, Route, Router, Routes } from 'react-router-dom';
+import { KomandaPage } from './components/KomandaPage/KomandaPage';
 
 function App() {
     return (
@@ -42,6 +43,8 @@ function App() {
             {/*<MainPageBody />*/}
             {/*<CityPage />*/}
             <Routes>
+                <Route path="/komanda" element={<KomandaPage />} />
+                <Route path="/" element={<MainPageBody />} />
                 <Route
                     path="/nijniy-novgorod/info-portal"
                     element={<JivemVNijnemInfoPortal />}
@@ -54,6 +57,63 @@ function App() {
                     path="/nijniy-novgorod/vk-group"
                     element={<JivemVNijnemVK />}
                 />
+                <Route
+                    path="/abakan/info-portal"
+                    element={<AbakanInfoPortal />}
+                />
+                <Route path="/abakan/notabene" element={<AbakanNotaBene />} />
+                <Route path="/abakan/radio" element={<AbakanRadio />} />
+                <Route path="/abakan/tv" element={<AbakanTV />} />
+                <Route path="/abakan/tg-channel" element={<AbakanTG />} />
+                <Route path="/abakan/vk-group" element={<AbakanVK />} />
+
+                <Route path="/achinsk/tv" element={<AchinskTV />} />
+
+                <Route path="/bratsk/bratsk-24" element={<Bratsk24 />} />
+                <Route path="/bratsk/domashniy" element={<BratskDomashniy />} />
+                <Route
+                    path="/bratsk/evropa-plus"
+                    element={<BratskEvropaPlus />}
+                />
+                <Route path="/bratsk/tg-channel" element={<BratskTG />} />
+                <Route path="/bratsk/vk-group" element={<BratskVK />} />
+                <Route
+                    path="/bratsk/info-portal"
+                    element={<BratskInfoPortal />}
+                />
+                <Route path="/bratsk/pifm" element={<BratskPiFM />} />
+                <Route path="/bratsk/shanson" element={<BratskShanson />} />
+                <Route path="/bratsk/sts" element={<BratskSTS />} />
+                <Route path="/bratsk/tvc" element={<BratskTVC />} />
+                <Route path="/bratsk/umorfm" element={<BratskUmorFM />} />
+
+                <Route
+                    path="/irkutsk/avtoradio"
+                    element={<IrkutskAvtoradio />}
+                />
+                <Route path="/irkutsk/shanson" element={<IrkutskShanson />} />
+                <Route path="/irkutsk/tg-channel" element={<IrkutskTG />} />
+                <Route path="/irkutsk/tv" element={<IrkutskTV />} />
+                <Route path="/irkutsk/vk-group" element={<IrkutskVK />} />
+
+                <Route
+                    path="/krasnoyarsk/info-portal"
+                    element={<KrasnoyarskInfoPortal />}
+                />
+                <Route
+                    path="/krasnoyarsk/radio"
+                    element={<KrasnoyarskRadio />}
+                />
+                <Route
+                    path="/krasnoyarsk/tg-channel"
+                    element={<KrasnoyarskTG />}
+                />
+                <Route path="/krasnoyarsk/tv" element={<KrasnoyarskTV />} />
+                <Route
+                    path="/krasnoyarsk/vk-group"
+                    element={<KrasnoyarskVK />}
+                />
+                <Route path="*" element={<Navigate to="/" />} />
             </Routes>
         </div>
     );

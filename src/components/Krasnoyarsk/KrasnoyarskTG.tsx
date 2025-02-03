@@ -1,8 +1,10 @@
 import styles from '../../shared/cityPage.module.scss';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 export const KrasnoyarskTG = () => {
     const [isMobile, setIsMobile] = useState(false);
 
+    const navigate = useNavigate();
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
@@ -18,7 +20,9 @@ export const KrasnoyarskTG = () => {
             <div className={styles.headerContainer}>
                 <img
                     src={
-                        isMobile ? 'blankBackground.svg' : 'blankBackground.svg'
+                        isMobile
+                            ? '/blankBackground.svg'
+                            : '/blankBackground.svg'
                     }
                     alt="blankBackground"
                     className={styles.headerImage}
@@ -29,13 +33,34 @@ export const KrasnoyarskTG = () => {
             </div>
 
             <div className={styles.linksListContainer}>
-                <button className={styles.link}>Информационный портал</button>
-                <button className={`${styles.link} ${styles.active}`}>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/krasnoyarsk/info-portal')}
+                >
+                    Информационный портал
+                </button>
+                <button
+                    className={`${styles.link} ${styles.active}`}
+                    onClick={() => navigate('/krasnoyarsk/tg-channel')}
+                >
                     Телеграм-канал
                 </button>
-                <button className={styles.link}>Группа ВК</button>
-                <button className={styles.link}>Телеканал “ПРИМА”</button>
-                <button className={styles.link}>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/krasnoyarsk/vk-group')}
+                >
+                    Группа ВК
+                </button>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/krasnoyarsk/tv')}
+                >
+                    Телеканал “ПРИМА”
+                </button>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/krasnoyarsk/radio')}
+                >
                     Радио “Красноярск Главный”
                 </button>
             </div>
@@ -45,7 +70,7 @@ export const KrasnoyarskTG = () => {
                         Телеграм-канал «Прима»
                     </div>
                     <img
-                        src={`blankImage.svg`}
+                        src={`/blankImage.svg`}
                         alt="blankImage"
                         className={styles.image}
                     />

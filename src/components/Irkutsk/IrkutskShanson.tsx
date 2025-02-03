@@ -1,8 +1,10 @@
 import styles from '../../shared/cityPage.module.scss';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 export const IrkutskShanson = () => {
     const [isMobile, setIsMobile] = useState(false);
 
+    const navigate = useNavigate();
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
@@ -18,7 +20,9 @@ export const IrkutskShanson = () => {
             <div className={styles.headerContainer}>
                 <img
                     src={
-                        isMobile ? 'blankBackground.svg' : 'blankBackground.svg'
+                        isMobile
+                            ? '/blankBackground.svg'
+                            : '/blankBackground.svg'
                     }
                     alt="blankBackground"
                     className={styles.headerImage}
@@ -29,11 +33,34 @@ export const IrkutskShanson = () => {
             </div>
 
             <div className={styles.linksListContainer}>
-                <button className={styles.link}>Телеграм-канал</button>
-                <button className={styles.link}>Группа ВК</button>
-                <button className={styles.link}>Телеканал НТС</button>
-                <button className={styles.link}>Авторадио Иркутск</button>
-                <button className={`${styles.link} ${styles.active}`}>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/irkutsk/tg-channel')}
+                >
+                    Телеграм-канал
+                </button>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/irkutsk/vk-group')}
+                >
+                    Группа ВК
+                </button>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/irkutsk/tv')}
+                >
+                    Телеканал НТС
+                </button>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/irkutsk/avtoradio')}
+                >
+                    Авторадио Иркутск
+                </button>
+                <button
+                    className={`${styles.link} ${styles.active}`}
+                    onClick={() => navigate('/irkutsk/shanson')}
+                >
                     Радио Шансон Иркутск
                 </button>
             </div>
@@ -43,7 +70,7 @@ export const IrkutskShanson = () => {
                         Радио Шансон Иркутск
                     </div>
                     <img
-                        src={`blankImage.svg`}
+                        src={`/blankImage.svg`}
                         alt="blankImage"
                         className={styles.image}
                     />
