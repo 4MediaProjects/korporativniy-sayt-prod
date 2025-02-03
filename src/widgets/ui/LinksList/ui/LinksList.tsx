@@ -16,14 +16,13 @@ export const LinksList = ({ props }: Props) => {
   return (
     <div className={styles.container}>
       {props.map((item, index) => (
-        <a
+        <button
           className={`${styles.link} ${activeIndex === index ? styles.active : ''}`}
-          href={item.href}
           key={index}
           onClick={() => setActiveIndex(index)}
         >
           {item.title}
-        </a>
+        </button>
       ))}
     </div>
   );

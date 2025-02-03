@@ -1,0 +1,366 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 0 100px 40px 100px;
+}
+
+.headerContainer {
+  position: relative;
+  width: 100vw;
+  max-height: 400px;
+  margin-left: calc(-1 * 100px);
+  overflow: hidden;
+}
+
+.headerImage {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.headerOverlay {
+  position: absolute;
+  bottom: 100px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap:30px;
+  align-items: flex-start;
+  padding: 10px 5vw 10px 5vw;
+}
+
+.imageTitle {
+  width: 262px;
+  height: auto;
+  margin-bottom: 1vh;
+}
+
+.title {
+  font-family: Inter, sans-serif;
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: white;
+}
+
+
+@media (max-width: 768px) {
+  .title{
+    font-size: 24px;
+  }
+  .container {
+    padding: 0 5px;
+  }
+
+  .headerContainer {
+    max-height: 500px;
+    margin-left: calc(-1 * 5px);
+  }
+
+  .headerImage {
+    height: 80vh;
+    object-fit: cover;
+  }
+
+  .headerOverlay {
+    padding-left: 5vw;
+    padding-right: 5vw;
+    padding-bottom: 5vh;
+    bottom: 0;
+    left: 0;
+  }
+
+  .imageTitle {
+    width: 221px;
+  }
+}
+
+
+
+.linksListContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 27px;
+  margin-top: 20px;
+  justify-content: start;
+}
+
+.link {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 19.2px;
+  text-decoration: none;
+  color: #000000;
+  height: 39px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 1000px;
+  border: 1px solid #D4D4D4;
+  transition: background-color 0.3s, color 0.3s;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+
+@media (max-width: 768px) {
+  .linksListContainer {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #d4d4d4 transparent;
+    padding-bottom: 10px;
+  }
+
+  .linksListContainer::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .linksListContainer::-webkit-scrollbar-thumb {
+    background-color: #d4d4d4;
+    border-radius: 100px;
+  }
+
+  .linksListContainer::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+
+.link.active {
+  background-color: #EB721D;
+  color: white;
+}
+
+.contentContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 100px;
+
+  @media (max-width: 768px) {
+    padding: 0 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+.cardImageButtonsContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 575px;
+  justify-content: start;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    width: 328px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.cardImageButtonsTitle {
+  font-family: Inter;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 43.2px;
+  text-align: left;
+  color: #000000;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+}
+
+.image {
+  width: 100%;
+  max-width: 575px;
+  height: auto;
+  border-radius: 30px;
+  object-fit: cover;
+
+  @media (max-width: 768px) {
+    max-width: 328px;
+    height: 242px;
+    border-radius: 30px;
+  }
+}
+
+.buttonList {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    align-items: center;
+  }
+}
+
+.orangeButton {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  max-width: 292px;
+  width: 100%;
+  background-color: #EB721D;
+  border-radius: 1000px;
+  padding: 17px 12px;
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    max-width: 100vw;
+    width: 100%;
+  }
+}
+
+.reverseOrangeButton {
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  max-width: 292px;
+  width: 100%;
+  background: none;
+  border-radius: 1000px;
+  padding: 17px 12px;
+  color: #EB721D;
+  border: 1px solid #EB721D;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+  letter-spacing: 0.01em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  cursor: pointer;
+
+  @media (max-width: 768px) {
+    max-width: 100vw;
+    width: 100%;
+  }
+}
+
+.tablesContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.tablesTitle {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+}
+
+.tableContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.tableTitle {
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 28.8px;
+}
+
+.audienceTable {
+  display: flex;
+  flex-direction: row;
+  background: white;
+  max-height: 129px;
+  padding: 20px;
+  gap: 27px;
+  border-radius: 16px;
+
+}
+
+
+.table {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+  padding: 40px;
+  gap: 27px;
+  border-radius: 16px;
+}
+
+.audienceTableContent {
+  padding: 40px;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 768px) {
+    display: block;
+    padding: 0;
+  }
+}
+
+.audienceTableContentTitle {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  color: #777777;
+}
+.audienceTableContentTitleText{
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-top: -35px;
+  @media (max-width: 768px) {
+    margin-top: -15px;
+  }
+}
+
+.audienceTableContentText {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+  color: #000000;
+}
+
+.audienceTableCell {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.tableRow {
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21.6px;
+}

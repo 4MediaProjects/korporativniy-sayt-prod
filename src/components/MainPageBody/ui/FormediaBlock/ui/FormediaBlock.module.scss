@@ -1,4 +1,4 @@
-.container{
+.cardImageButtonsContainer{
   display: flex;
   flex-direction: column;
   gap: 40px;
@@ -6,7 +6,6 @@
 
 .mainTextBlock{
   width: 755px;
-  height: 174px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -33,7 +32,6 @@
 
 .secondaryTextBlock{
   width: 595px;
-  height: 146px;
   display: flex;
   flex-direction: column;
   gap: 20px;
