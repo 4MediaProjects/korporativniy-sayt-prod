@@ -1,11 +1,13 @@
 import styles from './ProjectsList.module.scss';
 import ButtonList from '../../../../../widgets/ui/ButtonList';
+import { useNavigate } from 'react-router-dom';
 interface IProject {
     imageName?: string;
     header: string;
     secondaryText: string;
     linksList: any[];
     buttonText: string;
+    buttonLink:string;
 }
 
 interface IProjectsListProps {
@@ -13,6 +15,7 @@ interface IProjectsListProps {
 }
 
 export const ProjectsList = ({ projects }: IProjectsListProps) => {
+    const navigate = useNavigate()
     return (
         <div className={styles.container}>
             <div className={styles.title}>Проекты</div>
@@ -37,9 +40,9 @@ export const ProjectsList = ({ projects }: IProjectsListProps) => {
                                 <div className={styles.linksList}>
                                     {project.linksList.map((link, i) => (
                                         <a
+                                            className={styles.link}
                                             key={i}
                                             href={link.href}
-                                            target="_blank"
                                             rel="noopener noreferrer"
                                         >
                                             {link.text}
@@ -49,6 +52,7 @@ export const ProjectsList = ({ projects }: IProjectsListProps) => {
                                 <div className={styles.buttonList}>
                                     <button
                                         className={styles.reverseOrangeButton}
+                                        onClick={() => navigate(project.buttonLink)}
                                     >
                                         Подробнее
                                     </button>

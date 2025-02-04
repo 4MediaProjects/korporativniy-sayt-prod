@@ -1,15 +1,56 @@
 import styles from './KomandaPage.module.scss';
+
+const staffList = [
+    {
+        name: 'Анна Лукьянова',
+        role: 'Руководитель проекта “АТВ”',
+        picture: 'guy',
+    },
+    {
+        name: 'Дмитрий Акулов',
+        role: 'Руководитель проекта “НТС”',
+        picture: 'guy',
+    },
+    {
+        name: 'Ирина Рашкован',
+        role: 'Руководитель проекта “Юг Сибири”',
+        picture: 'guy',
+    },
+    {
+        name: 'Марина Делева',
+        role: 'Руководитель проекта “Кубань Информ”',
+        picture: 'guy',
+    },
+    {
+        name: 'Александр Кольчурин',
+        role: 'Руководитель проекта “Живём в Нижнем”',
+        picture: 'guy',
+    },
+    {
+        name: 'Дмитрий Ощепков',
+        role: 'Руководитель проекта “БСТ”',
+        picture: 'guy',
+    },
+    {
+        name: 'Сергей Рубцов',
+        role: 'Руководитель проекта “ПРИМА”',
+        picture: 'guy',
+    },
+];
 export const KomandaPage = () => {
     return (
         <div className={styles.container}>
             <div className={styles.headerModule}>
                 <div className={styles.textModule}>
-                    <div className={styles.header}>Команда ФорМедиа</div>
-                    <div className={styles.secondaryText}>
-                        Это коллектив талантливых и целеустремленных
-                        профессионалов, которые создают инновационный контент и
-                        двигают медиа-индустрию вперед.
+                    <div className={styles.headerTextWrapper}>
+                        <div className={styles.header}>Команда ФорМедиа</div>
+                        <div className={styles.secondaryText}>
+                            Это коллектив талантливых и целеустремленных
+                            профессионалов, которые создают инновационный
+                            контент и двигают медиа-индустрию вперед.
+                        </div>
                     </div>
+
                     <img src="/boss.svg" alt="boss" className={styles.img} />
                 </div>
                 <div className={styles.quoteModule}>
@@ -53,6 +94,11 @@ export const KomandaPage = () => {
                         Генеральный директор ФорМедиа
                     </div>
                     <div className={styles.buttonList}>
+                        <img
+                            src="/boss.svg"
+                            alt="boss"
+                            className={styles.imgPhone}
+                        />
                         <button className={styles.orangeButton}>
                             Интервью агентству ТАСС
                         </button>
@@ -60,55 +106,17 @@ export const KomandaPage = () => {
                 </div>
             </div>
             <div className={styles.staffModule}>
-                <div className={styles.cardContainer}>
-                    <img src="/guy.svg" alt="guy" className={styles.staffPic} />
-                    <div className={styles.staffName}>Анна Лукьянова</div>
-                    <div className={styles.staffRole}>
-                        Руководитель проекта “АТВ”{' '}
+                {staffList.map((item, index) => (
+                    <div className={styles.cardContainer} key={index}>
+                        <img
+                            src={`/${item.picture}.svg`}
+                            alt="guy"
+                            className={styles.staffPic}
+                        />
+                        <div className={styles.staffName}>{item.name}</div>
+                        <div className={styles.staffRole}>{item.role}</div>
                     </div>
-                </div>
-                <div className={styles.cardContainer}>
-                    <img src="/guy.svg" alt="guy" className={styles.staffPic} />
-                    <div className={styles.staffName}>Дмитрий Акулов</div>
-                    <div className={styles.staffRole}>
-                        Руководитель проекта “НТС”
-                    </div>
-                </div>
-                <div className={styles.cardContainer}>
-                    <img src="/guy.svg" alt="guy" className={styles.staffPic} />
-                    <div className={styles.staffName}>Ирина Рашкован</div>
-                    <div className={styles.staffRole}>
-                        Руководитель проекта “Юг Сибири”
-                    </div>
-                </div>
-                <div className={styles.cardContainer}>
-                    <img src="/guy.svg" alt="guy" className={styles.staffPic} />
-                    <div className={styles.staffName}>Марина Делева</div>
-                    <div className={styles.staffRole}>
-                        Руководитель проекта “Кубань Информ”
-                    </div>
-                </div>
-                <div className={styles.cardContainer}>
-                    <img src="/guy.svg" alt="guy" className={styles.staffPic} />
-                    <div className={styles.staffName}>Александр Кольчурин</div>
-                    <div className={styles.staffRole}>
-                        Руководитель проекта “Живём в Нижнем”
-                    </div>
-                </div>
-                <div className={styles.cardContainer}>
-                    <img src="/guy.svg" alt="guy" className={styles.staffPic} />
-                    <div className={styles.staffName}>Дмитрий Ощепков</div>
-                    <div className={styles.staffRole}>
-                        Руководитель проекта “БСТ”
-                    </div>
-                </div>
-                <div className={styles.cardContainer}>
-                    <img src="/guy.svg" alt="guy" className={styles.staffPic} />
-                    <div className={styles.staffName}>Сергей Рубцов</div>
-                    <div className={styles.staffRole}>
-                        Руководитель проекта “ПРИМА”
-                    </div>
-                </div>
+                ))}
             </div>
         </div>
     );

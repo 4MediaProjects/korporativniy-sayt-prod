@@ -8,20 +8,17 @@ const projects = [
         linksList: [
             { href: '/nijniy-novgorod/info-portal', text: 'Интернет-портал' },
             { href: '/nijniy-novgorod/tg-channel', text: 'Социальные сети' },
-            { href: '#', text: 'Радио' },
         ],
         buttonText: 'подробнее',
+        buttonLink: '/nijniy-novgorod/info-portal',
     },
     {
         imageName: 'cuban',
         header: 'КубаньИнформ',
         secondaryText: 'Краснодар',
-        linksList: [
-            { href: '#', text: 'Интернет-портал' },
-            { href: '#', text: 'Социальные сети' },
-            { href: '#', text: 'Радио' },
-        ],
+        linksList: [],
         buttonText: 'подробнее',
+        buttonLink: '/#',
     },
     {
         imageName: 'gorodPrima',
@@ -34,18 +31,15 @@ const projects = [
             { href: '/krasnoyarsk/tg-channel', text: 'Социальные сети' },
         ],
         buttonText: 'подробнее',
+        buttonLink: 'krasnoyarsk/info-portal',
     },
     {
         imageName: 'achinsk',
         header: 'Ачинское телевидение',
         secondaryText: 'Ачинск',
-        linksList: [
-            { href: '#', text: 'Интернет-портал' },
-            { href: '/achinsk/tv', text: 'ТВ' },
-            { href: '#', text: 'Радио' },
-            { href: '#', text: 'Социальные сети' },
-        ],
+        linksList: [{ href: '/achinsk/tv', text: 'ТВ' }],
         buttonText: 'подробнее',
+        buttonLink: '/achinsk/tv',
     },
     {
         imageName: 'bratsk',
@@ -58,6 +52,7 @@ const projects = [
             { href: '/bratsk/tg-channel', text: 'Социальные сети' },
         ],
         buttonText: 'подробнее',
+        buttonLink: '/bratsk/info-portal',
     },
     {
         imageName: 'irkutsk',
@@ -70,51 +65,43 @@ const projects = [
             { href: '/irkutsk/tg-channel', text: 'Социальные сети' },
         ],
         buttonText: 'подробнее',
+        buttonLink: '/irkutsk/tv',
     },
     {
         imageName: 'perviyBaikalskiy',
         header: 'Первый байкальский',
         secondaryText: 'Иркутск',
-        linksList: [
-            { href: '#', text: 'Интернет-портал' },
-            { href: '#', text: 'Социальные сети' },
-        ],
+        linksList: [],
         buttonText: 'подробнее',
+        buttonLink: '/#',
     },
     {
         imageName: 'yugSibiri',
         header: 'Юг Сибири',
         secondaryText: 'Абакан, Саяногорск (Республика Хакасия)',
         linksList: [
-            { href: '#', text: 'Интернет-портал' },
-            { href: '#', text: 'ТВ' },
-            { href: '#', text: 'Радио' },
-            { href: '#', text: 'Социальные сети' },
+            { href: '/abakan/info-portal', text: 'Интернет-портал' },
+            { href: '/abakan/tv', text: 'ТВ' },
+            { href: '/abakan/radio', text: 'Радио' },
+            { href: '/abakan/vk-group', text: 'Социальные сети' },
         ],
         buttonText: 'подробнее',
+        buttonLink: '/abakan/info-portal',
     },
     {
         imageName: 'sibirRabotaet',
         header: 'Спецпроект',
         secondaryText: 'Производство медиаконтента',
-        linksList: [
-            { href: '#', text: 'Интернет-портал' },
-            { href: '#', text: 'ТВ' },
-            { href: '#', text: 'Радио' },
-            { href: '#', text: 'Социальные сети' },
-        ],
+        linksList: [],
         buttonText: 'подробнее',
+        buttonLink: '/#',
     },
     {
         header: 'Спецпроект',
         secondaryText: 'Прима продакшен',
-        linksList: [
-            { href: '#', text: 'Интернет-портал' },
-            { href: '#', text: 'ТВ' },
-            { href: '#', text: 'Радио' },
-            { href: '#', text: 'Социальные сети' },
-        ],
+        linksList: [],
         buttonText: 'подробнее',
+        buttonLink: '/#',
     },
 ];
 export const MainPageBody = () => {
@@ -145,6 +132,7 @@ export const MainPageBody = () => {
                     </div>
                 </div>
             </div>
+
             <div className={styles.enumBlockContainer}>
                 <div className={styles.enumBlock}>
                     <div className={styles.enumBlockHeaderText}>25 лет</div>

@@ -181,12 +181,14 @@
 
 .image {
   width: 100%;
+  min-width: 575px;
   max-width: 575px;
   height: auto;
   border-radius: 30px;
   object-fit: cover;
 
   @media (max-width: 768px) {
+    min-width: 328px;
     max-width: 328px;
     height: 242px;
     border-radius: 30px;

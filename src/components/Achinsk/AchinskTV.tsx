@@ -47,7 +47,7 @@ export const AchinskTV = () => {
                         Телеканал АТВ
                     </div>
                     <img
-                        src={`jivemVNijnemInfoPortal.svg`}
+                        src={`/jivemVNijnemInfoPortal.svg`}
                         alt="blankImage"
                         className={styles.image}
                     />

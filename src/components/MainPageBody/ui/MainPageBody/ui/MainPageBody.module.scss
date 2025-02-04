@@ -220,12 +220,27 @@ span{
 }
 
 .imageOverlay{
+  width: 100vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   @media (max-width: 768px) {
     flex-direction: column;
   }
+}
+.imageOverlayBackground{
+  background: red;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
+
+.imgBackground{
+  width: 1680px;
+  height: 1680px;
 }
 
 .img{

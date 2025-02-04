@@ -160,3 +160,13 @@
     flex-direction: column;
   }
 }
+
+.link {
+  text-decoration: underline !important;
+  color: inherit;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #EB721D;
+  }
+}
