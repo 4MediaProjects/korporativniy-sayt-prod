@@ -14,19 +14,19 @@ export const Header = () => {
             <div className={styles.linkContainer}>
                 <div className={styles.links}>
                     <div>
-                        <a href="">Проекты холдинга</a>
+                        <a href="/blank">Проекты холдинга</a>
                     </div>
                     <div>
-                        <a href="">О холдинге</a>
+                        <a href="/blank">О холдинге</a>
                     </div>
                     <div>
-                        <a href="">Продакшен</a>
+                        <a href="/komanda">Продакшен</a>
                     </div>
                     <div>
-                        <a href="">Вакансии</a>
+                        <a href="/blank">Вакансии</a>
                     </div>
                     <div>
-                        <a href="">Контакты</a>
+                        <a href="/blank">Контакты</a>
                     </div>
                 </div>
             </div>

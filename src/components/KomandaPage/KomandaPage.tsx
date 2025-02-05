@@ -1,4 +1,5 @@
 import styles from './KomandaPage.module.scss';
+import { useNavigate } from 'react-router-dom';
 
 const staffList = [
     {
@@ -38,6 +39,7 @@ const staffList = [
     },
 ];
 export const KomandaPage = () => {
+    const navigate = useNavigate();
     return (
         <div className={styles.container}>
             <div className={styles.headerModule}>
@@ -99,7 +101,10 @@ export const KomandaPage = () => {
                             alt="boss"
                             className={styles.imgPhone}
                         />
-                        <button className={styles.orangeButton}>
+                        <button
+                            className={styles.orangeButton}
+                            onClick={() => navigate('/blank')}
+                        >
                             Интервью агентству ТАСС
                         </button>
                     </div>

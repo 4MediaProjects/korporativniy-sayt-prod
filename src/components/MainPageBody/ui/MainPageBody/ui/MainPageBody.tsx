@@ -1,5 +1,6 @@
 import styles from './MainPageBody.module.scss';
 import ProjectsList from '../../ProjectsList';
+import { useNavigate } from 'react-router-dom';
 const projects = [
     {
         imageName: 'jivemVnijnem',
@@ -16,9 +17,13 @@ const projects = [
         imageName: 'cuban',
         header: 'КубаньИнформ',
         secondaryText: 'Краснодар',
-        linksList: [],
+        linksList: [
+            { href: '/blank', text: 'Интернет-портал' },
+            { href: '/blank', text: 'Социальные сети' },
+            { href: '/blank', text: 'Радио' },
+        ],
         buttonText: 'подробнее',
-        buttonLink: '/#',
+        buttonLink: '/blank',
     },
     {
         imageName: 'gorodPrima',
@@ -71,9 +76,12 @@ const projects = [
         imageName: 'perviyBaikalskiy',
         header: 'Первый байкальский',
         secondaryText: 'Иркутск',
-        linksList: [],
+        linksList: [
+            { href: '/blank', text: 'Интернет-портал' },
+            { href: '/blank', text: 'Социальные сети' },
+        ],
         buttonText: 'подробнее',
-        buttonLink: '/#',
+        buttonLink: '/blank',
     },
     {
         imageName: 'yugSibiri',
@@ -92,19 +100,30 @@ const projects = [
         imageName: 'sibirRabotaet',
         header: 'Спецпроект',
         secondaryText: 'Производство медиаконтента',
-        linksList: [],
+        linksList: [
+            { href: '/blank', text: 'Интернет-портал' },
+            { href: '/blank', text: 'ТВ' },
+            { href: '/blank', text: 'Радио' },
+            { href: '/blank', text: 'Социальные сети' },
+        ],
         buttonText: 'подробнее',
-        buttonLink: '/#',
+        buttonLink: '/blank',
     },
     {
         header: 'Спецпроект',
         secondaryText: 'Прима продакшен',
-        linksList: [],
+        linksList: [
+            { href: '/blank', text: 'Интернет-портал' },
+            { href: '/blank', text: 'ТВ' },
+            { href: '/blank', text: 'Радио' },
+            { href: '/blank', text: 'Социальные сети' },
+        ],
         buttonText: 'подробнее',
-        buttonLink: '/#',
+        buttonLink: '/blank',
     },
 ];
 export const MainPageBody = () => {
+    const navigate = useNavigate();
     return (
         <div className={styles.container}>
             <div className={styles.formediaBlockContainer}>
@@ -122,11 +141,17 @@ export const MainPageBody = () => {
                     </div>
 
                     <div className={styles.buttonList}>
-                        <button className={styles.orangeButton}>
+                        <button
+                            className={styles.orangeButton}
+                            onClick={() => navigate('/blank')}
+                        >
                             Медиакит
                         </button>
 
-                        <button className={styles.reverseOrangeButton}>
+                        <button
+                            className={styles.reverseOrangeButton}
+                            onClick={() => navigate('/blank')}
+                        >
                             Реклама
                         </button>
                     </div>
@@ -186,7 +211,10 @@ export const MainPageBody = () => {
                             потребностям.
                         </div>
                         <div className={styles.buttonList}>
-                            <button className={styles.orangeButton}>
+                            <button
+                                className={styles.orangeButton}
+                                onClick={() => navigate('/blank')}
+                            >
                                 О холдинге
                             </button>
                         </div>

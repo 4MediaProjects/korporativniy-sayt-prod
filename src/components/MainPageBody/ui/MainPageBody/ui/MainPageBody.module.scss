@@ -1,9 +1,21 @@
+body {
+  background: #f0f0f0;
+  padding: 0 50px;
+  @media (max-width: 768px) {
+    padding: 0;
+  }
+}
 .container {
-  margin-top: 80px;
+  //margin-top: 80px;
   padding: 0 150px;
   display: flex;
   flex-direction: column;
   gap:100px;
+  max-width: 2000px;
+  margin: 0 auto;
+  background: #f5f7f8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
   @media (max-width: 768px) {
   padding: 0 10px;
 }
@@ -165,8 +177,8 @@
 
 .enumBlock {
   flex: 1 1 auto; /* Блоки равномерно сжимаются */
-  min-width: 10vw; /* Минимальный размер */
-  max-width: 20vw; /* Максимальный размер */
+  min-width: 10%; /* Минимальный размер */
+  max-width: 20%; /* Максимальный размер */
   aspect-ratio: 1.35; /* Сохранение пропорций */
   border-radius: 12px;
   display: flex;
@@ -220,7 +232,7 @@ span{
 }
 
 .imageOverlay{
-  width: 100vw;
+  width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -229,7 +241,6 @@ span{
   }
 }
 .imageOverlayBackground{
-  background: red;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -244,10 +255,11 @@ span{
 }
 
 .img{
-  width: 1500px;
+  width: 85%;
   height: 700px;
   @media (max-width: 768px) {
     width: 360px;
     height: 170.92px;
+    margin-top: 40px;
   }
 }

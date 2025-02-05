@@ -35,6 +35,7 @@ import { AchinskTV } from './components/Achinsk/AchinskTV';
 import { JivemVNijnemInfoPortal } from './components/Livennov/JivemVNijnemInfoPortal';
 import { Navigate, Route, Router, Routes } from 'react-router-dom';
 import { KomandaPage } from './components/KomandaPage/KomandaPage';
+import { BlankPage } from './components/BlankPage/BlankPage';
 
 function App() {
     return (
@@ -114,6 +115,7 @@ function App() {
                     element={<KrasnoyarskVK />}
                 />
                 <Route path="*" element={<Navigate to="/" />} />
+                <Route path="/blank" element={<BlankPage />} />
             </Routes>
         </div>
     );
