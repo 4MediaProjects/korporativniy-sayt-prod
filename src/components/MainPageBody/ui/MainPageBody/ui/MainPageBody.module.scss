@@ -6,14 +6,14 @@ body {
   }
 }
 .container {
-  //margin-top: 80px;
-  padding: 0 150px;
+
+  padding: 100px 150px;
   display: flex;
   flex-direction: column;
   gap:100px;
   max-width: 2000px;
   margin: 0 auto;
-  background: #f5f7f8;
+
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   @media (max-width: 768px) {
@@ -32,12 +32,14 @@ body {
   flex-direction: column;
   gap: 20px;
   max-width: 500px;
+  z-index: 2;
   @media (max-width: 768px) {
     justify-content: center;
     align-items: center;
   }
   .mainText{
 
+    z-index: 2;
     font-size: 128px;
     font-weight: 400;
     line-height: 128px;
@@ -55,6 +57,7 @@ body {
   }
   .secondaryText{
 
+    z-index: 2;
     font-size: 48px;
     font-weight: 400;
     line-height: 48px;
@@ -83,7 +86,7 @@ body {
     align-items: center;
   }
   .thirdlyText{
-
+    z-index: 2;
     font-size: 24px;
     font-weight: 400;
     line-height: 29.05px;
@@ -102,6 +105,7 @@ body {
 }
 
 .buttonList{
+  z-index: 2;
   display: flex;
   flex-direction: row;
   gap: 10px;
@@ -164,6 +168,7 @@ body {
 }
 
 .enumBlockContainer {
+  z-index: 2;
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -258,8 +263,157 @@ span{
   width: 85%;
   height: 700px;
   @media (max-width: 768px) {
-    width: 360px;
+    width: 350px;
     height: 170.92px;
     margin-top: 40px;
   }
 }
+
+.textNumberEnum {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  position: absolute;
+  z-index: 2;
+  left: 820px;
+  max-width: 100%;
+}
+
+.textNumberContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  transform: translateX(var(--offset, 0px));
+}
+
+.textNumberContainer:nth-child(1) {
+  --offset: -30px;
+}
+.textNumberContainer:nth-child(2) {
+  --offset: 40px;
+}
+.textNumberContainer:nth-child(3) {
+  --offset: 80px;
+}
+.textNumberContainer:nth-child(4) {
+  --offset: 120px;
+}
+
+
+@media (min-width: 1310px) {
+  .textNumberEnum {
+    left: 900px;
+  }
+  .textNumberContainer:nth-child(4) {
+    --offset: 100px;
+  }
+}
+
+@media (min-width: 1700px) {
+  .textNumberEnum {
+    left: 1150px;
+  }
+  .textNumberContainer:nth-child(4) {
+    --offset: 120px;
+  }
+}
+
+
+
+@media (min-width: 2500px) {
+  .textNumberEnum {
+    left: 1180px;
+  }
+}
+
+@media (min-width: 2900px) {
+  .textNumberEnum {
+    left: 1440px;
+  }
+}
+
+@media (min-width: 3200px) {
+  .textNumberEnum {
+    left: 1580px;
+  }
+}
+
+
+
+@media (max-width: 1300px) {
+  .textNumberEnum {
+    left: 900px;
+  }
+  .textNumberContainer:nth-child(4) {
+    --offset: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  .textNumberEnum {
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 0;
+    gap: 10px;
+  }
+  .textNumberContainer {
+    width: 100%;
+  }
+  .textNumberContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .textNumberContainer:nth-child(1) {
+    --offset: 0;
+  }
+  .textNumberContainer:nth-child(2) {
+    --offset: 0;
+  }
+  .textNumberContainer:nth-child(3) {
+    --offset: 16px;
+  }
+  .textNumberContainer:nth-child(4) {
+    --offset: 10px;
+  }
+  .textNumber{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+}
+
+.textNumber {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 28.8px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  white-space: normal;
+  @media (max-width: 1300px) {
+      font-size: 15px;
+      line-height: 24px;
+    }
+  }
+
+
+.numberImg {
+  width: 53px;
+  height: 53px;
+}
+
+.circleImg {
+  position: absolute;
+  width: 70%;
+  height: 60%;
+  top: -70px;
+  max-width: 1200px;
+  max-height: 800px;
+  z-index: 1;
+  @media (max-width: 1300px) {
+    display: none;
+  }
+}
+

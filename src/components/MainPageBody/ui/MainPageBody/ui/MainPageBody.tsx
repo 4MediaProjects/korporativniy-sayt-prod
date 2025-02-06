@@ -126,35 +126,85 @@ export const MainPageBody = () => {
     const navigate = useNavigate();
     return (
         <div className={styles.container}>
-            <div className={styles.formediaBlockContainer}>
-                <div className={styles.mainTextBlock}>
-                    <div className={styles.mainText}>ФорМедиа</div>
+            <div>
+                <div className={styles.formediaBlockContainer}>
+                    <div className={styles.mainTextBlock}>
+                        <div className={styles.mainText}>ФорМедиа</div>
 
-                    <div className={styles.secondaryText}>
-                        Региональный медиахолдинг
-                    </div>
-                </div>
-                <div className={styles.secondaryTextBlock}>
-                    <div className={styles.thirdlyText}>
-                        крупнейшая медийная компания, объединяющая четыре
-                        основных медиа-ресурса
+                        <div className={styles.secondaryText}>
+                            Региональный медиахолдинг
+                        </div>
+                        <div className={styles.secondaryTextBlock}>
+                            <div className={styles.thirdlyText}>
+                                крупнейшая медийная компания, объединяющая
+                                четыре основных медиа-ресурса
+                            </div>
+
+                            <div className={styles.buttonList}>
+                                <button
+                                    className={styles.orangeButton}
+                                    onClick={() => navigate('/blank')}
+                                >
+                                    Медиакит
+                                </button>
+
+                                <button
+                                    className={styles.reverseOrangeButton}
+                                    onClick={() => navigate('/blank')}
+                                >
+                                    Реклама
+                                </button>
+                            </div>
+                        </div>
                     </div>
 
-                    <div className={styles.buttonList}>
-                        <button
-                            className={styles.orangeButton}
-                            onClick={() => navigate('/blank')}
-                        >
-                            Медиакит
-                        </button>
-
-                        <button
-                            className={styles.reverseOrangeButton}
-                            onClick={() => navigate('/blank')}
-                        >
-                            Реклама
-                        </button>
+                    <div className={styles.textNumberEnum}>
+                        <div className={styles.textNumberContainer}>
+                            <img
+                                src="/twenty.svg"
+                                alt="twenty"
+                                className={styles.numberImg}
+                            />
+                            <div className={styles.textNumber}>
+                                Телекомпаний
+                            </div>
+                        </div>
+                        <div className={styles.textNumberContainer}>
+                            <img
+                                src="/thirteen.svg"
+                                alt="thirteen"
+                                className={styles.numberImg}
+                            />
+                            <div className={styles.textNumber}>
+                                Радиостанций
+                            </div>
+                        </div>
+                        <div className={styles.textNumberContainer}>
+                            <img
+                                src="/ten.svg"
+                                alt="ten"
+                                className={styles.numberImg}
+                            />
+                            <div className={styles.textNumber}>
+                                Интернет-порталов
+                            </div>
+                        </div>
+                        <div className={styles.textNumberContainer}>
+                            <img
+                                src="/twenty.svg"
+                                alt="twenty"
+                                className={styles.numberImg}
+                            />
+                            <div className={styles.textNumber}>
+                                Групп в соц. сетях
+                            </div>
+                        </div>
                     </div>
+                    <img
+                        src="/background-image.svg"
+                        alt="background"
+                        className={styles.circleImg}
+                    />
                 </div>
             </div>
 
