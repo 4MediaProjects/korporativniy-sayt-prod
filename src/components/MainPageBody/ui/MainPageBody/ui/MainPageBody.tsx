@@ -64,7 +64,7 @@ const projects = [
         header: 'Новое телевидение Сибири',
         secondaryText: 'Иркутск',
         linksList: [
-            { href: '/irkutsk/vk-group', text: 'Интернет-портал' },
+            { href: '/irkutsk/info-portal', text: 'Интернет-портал' },
             { href: '/irkutsk/tv', text: 'ТВ' },
             { href: '/irkutsk/shanson', text: 'Радио' },
             { href: '/irkutsk/tg-channel', text: 'Социальные сети' },
@@ -77,11 +77,12 @@ const projects = [
         header: 'Первый байкальский',
         secondaryText: 'Иркутск',
         linksList: [
-            { href: '/blank', text: 'Интернет-портал' },
-            { href: '/blank', text: 'Социальные сети' },
+            { href: '/perviyBaikalskiy/info-portal', text: 'Интернет-портал' },
+            { href: '/perviyBaikalskiy/avtoradio', text: 'Авторадио' },
+            { href: '/perviyBaikalskiy/shanson', text: 'Шансон' },
         ],
         buttonText: 'подробнее',
-        buttonLink: '/blank',
+        buttonLink: '/perviyBaikalskiy/info-portal',
     },
     {
         imageName: 'yugSibiri',

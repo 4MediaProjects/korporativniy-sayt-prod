@@ -35,6 +35,12 @@ export const IrkutskVK = () => {
             <div className={styles.linksListContainer}>
                 <button
                     className={styles.link}
+                    onClick={() => navigate('/irkutsk/info-portal')}
+                >
+                    Информационный портал
+                </button>
+                <button
+                    className={styles.link}
                     onClick={() => navigate('/irkutsk/tg-channel')}
                 >
                     Телеграм-канал

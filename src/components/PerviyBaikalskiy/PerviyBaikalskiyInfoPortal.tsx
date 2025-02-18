@@ -1,7 +1,7 @@
 import styles from '../../shared/cityPage.module.scss';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-export const IrkutskTG = () => {
+export const PerviyBaikalskiyInfoPortal = () => {
     const [isMobile, setIsMobile] = useState(false);
 
     const navigate = useNavigate();
@@ -28,52 +28,34 @@ export const IrkutskTG = () => {
                     className={styles.headerImage}
                 />
                 <div className={styles.headerOverlay}>
-                    <div className={styles.title}>Иркутск</div>
+                    <div className={styles.title}>Первый Байкальский</div>
                 </div>
             </div>
 
             <div className={styles.linksListContainer}>
                 <button
-                    className={styles.link}
-                    onClick={() => navigate('/irkutsk/info-portal')}
+                    className={`${styles.link} ${styles.active}`}
+                    onClick={() => navigate('/perviyBaikalskiy/info-portal')}
                 >
                     Информационный портал
                 </button>
                 <button
-                    className={`${styles.link} ${styles.active}`}
-                    onClick={() => navigate('/irkutsk/tg-channel')}
+                    className={styles.link}
+                    onClick={() => navigate('/perviyBaikalskiy/avtoradio')}
                 >
-                    Телеграм-канал
+                    Авторадио
                 </button>
                 <button
                     className={styles.link}
-                    onClick={() => navigate('/irkutsk/vk-group')}
+                    onClick={() => navigate('/perviyBaikalskiy/shanson')}
                 >
-                    Группа ВК
-                </button>
-                <button
-                    className={styles.link}
-                    onClick={() => navigate('/irkutsk/tv')}
-                >
-                    Телеканал НТС
-                </button>
-                <button
-                    className={styles.link}
-                    onClick={() => navigate('/irkutsk/avtoradio')}
-                >
-                    Авторадио Иркутск
-                </button>
-                <button
-                    className={styles.link}
-                    onClick={() => navigate('/irkutsk/shanson')}
-                >
-                    Радио Шансон Иркутск
+                    Шансон
                 </button>
             </div>
             <div className={styles.contentContainer}>
                 <div className={styles.cardImageButtonsContainer}>
                     <div className={styles.cardImageButtonsTitle}>
-                        Телеграм-канал НТС
+                        Информационный потал «Первый Байкальский»
                     </div>
                     <img
                         src={`/blankImage.svg`}
@@ -91,47 +73,30 @@ export const IrkutskTG = () => {
                 </div>
                 <div className={styles.tablesContainer}>
                     <div className={styles.tablesTitle}>
-                        Официальный канал Нового телевидения Сибири. Все самое
-                        важное и интересное в Иркутске и Иркутской области
+                        Важнейшая информация о Байкале, экологии, туризме
+                        (тематика: информация о Байкале, экология, туризм)
+                        соцсети издания (ТГ, ВК, Дзен)
                     </div>
-                    <div className={styles.tableContainer}></div>
                     <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Статистика</div>
                         <div className={styles.table}>
                             <div className={styles.tableRow}>
-                                4 942 подписчика
+                                Посетители: более 25 000/мес.
                             </div>
                             <div className={styles.tableRow}>
-                                1,9% вовлеченность
+                                ТГ: более 6 000 подписчиков
                             </div>
                             <div className={styles.tableRow}>
-                                1 202 – средний охват публикации
+                                ВК: более 10 000 подписчиков
                             </div>
                             <div className={styles.tableRow}>
-                                1324 - рекламный охват
+                                Дзен: более 9 000 подписчиков.
                             </div>
                             <div className={styles.tableRow}>
-                                27% подписчиков читают посты в первые 24 часа
-                                после публикации
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.tableContainer}>
-                        <div className={styles.tableTitle}>
-                            Рекламные возможности
-                        </div>
-                        <div className={styles.table}>
-                            <div className={styles.tableRow}>
-                                Пост в канале (текст и оформление заказчика или
-                                наш пост по ТЗ заказчика)
-                            </div>
-                            <div className={styles.tableRow}>
-                                Репост публикации заказчика
-                            </div>
-                            <div className={styles.tableRow}>
-                                Нативная реклама (упоминание в наших постах
-                                (бренд, персона) или ссылка на материалы
-                                заказчика в наших постах)
+                                По статистике LiveInternet, «Первый Байкальский»
+                                занимает 58-70 позицию в рейтинге туристических
+                                сайтов России из более чем 2 000, по Иркутской
+                                области 1 позицию среди тематических сайтов.
                             </div>
                         </div>
                     </div>

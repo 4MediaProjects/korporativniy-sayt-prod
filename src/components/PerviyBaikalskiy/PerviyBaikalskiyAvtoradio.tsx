@@ -1,7 +1,7 @@
 import styles from '../../shared/cityPage.module.scss';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-export const IrkutskShanson = () => {
+export const PerviyBaikalskiyAvtoradio = () => {
     const [isMobile, setIsMobile] = useState(false);
 
     const navigate = useNavigate();
@@ -28,52 +28,34 @@ export const IrkutskShanson = () => {
                     className={styles.headerImage}
                 />
                 <div className={styles.headerOverlay}>
-                    <div className={styles.title}>Иркутск</div>
+                    <div className={styles.title}>Первый Байкальский</div>
                 </div>
             </div>
 
             <div className={styles.linksListContainer}>
                 <button
                     className={styles.link}
-                    onClick={() => navigate('/irkutsk/info-portal')}
+                    onClick={() => navigate('/perviyBaikalskiy/info-portal')}
                 >
                     Информационный портал
                 </button>
                 <button
-                    className={styles.link}
-                    onClick={() => navigate('/irkutsk/tg-channel')}
-                >
-                    Телеграм-канал
-                </button>
-                <button
-                    className={styles.link}
-                    onClick={() => navigate('/irkutsk/vk-group')}
-                >
-                    Группа ВК
-                </button>
-                <button
-                    className={styles.link}
-                    onClick={() => navigate('/irkutsk/tv')}
-                >
-                    Телеканал НТС
-                </button>
-                <button
-                    className={styles.link}
-                    onClick={() => navigate('/irkutsk/avtoradio')}
-                >
-                    Авторадио Иркутск
-                </button>
-                <button
                     className={`${styles.link} ${styles.active}`}
-                    onClick={() => navigate('/irkutsk/shanson')}
+                    onClick={() => navigate('/perviyBaikalskiy/avtoradio')}
                 >
-                    Радио Шансон Иркутск
+                    Авторадио
+                </button>
+                <button
+                    className={styles.link}
+                    onClick={() => navigate('/perviyBaikalskiy/shanson')}
+                >
+                    Шансон
                 </button>
             </div>
             <div className={styles.contentContainer}>
                 <div className={styles.cardImageButtonsContainer}>
                     <div className={styles.cardImageButtonsTitle}>
-                        Радио Шансон Иркутск
+                        Авторадио
                     </div>
                     <img
                         src={`/blankImage.svg`}
@@ -91,13 +73,7 @@ export const IrkutskShanson = () => {
                 </div>
                 <div className={styles.tablesContainer}>
                     <div className={styles.tablesTitle}>
-                        Крупнейшая радиостанция России, с 24-летним стажем
-                        работы, занимающая лидирующие позиции в рейтинге станций
-                        по всей России.
-                    </div>
-                    <div className={styles.tablesTitle}>
-                        Программы собственного производства: Иркутские новости,
-                        Прогноз погоды, Шансономания, Живой звук, Хит Шансона.
+                        Важнейшая информация о Байкале, экологии, туризме
                     </div>
                     <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Аудитория</div>
@@ -116,7 +92,7 @@ export const IrkutskShanson = () => {
                                             styles.audienceTableContentText
                                         }
                                     >
-                                        35 - 59 лет
+                                        Возраст: 25 - 55 лет
                                     </div>
                                 </div>
 
@@ -133,7 +109,45 @@ export const IrkutskShanson = () => {
                                             styles.audienceTableContentText
                                         }
                                     >
-                                        53% мужчины 47 % женщины
+                                        50% мужчины 50% женщины
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className={styles.tableContainer}>
+                        <div className={styles.audienceTable}>
+                            <div className={styles.audienceTableContent}>
+                                <div className={styles.audienceTableCell}>
+                                    <div
+                                        className={
+                                            styles.audienceTableContentTitle
+                                        }
+                                    >
+                                        Социальный статус
+                                    </div>
+                                    <div
+                                        className={
+                                            styles.audienceTableContentText
+                                        }
+                                    >
+                                        47% руководители/ специалисты/служащие
+                                    </div>
+                                </div>
+                                <div className={styles.audienceTableCell}>
+                                    <div
+                                        className={
+                                            styles.audienceTableContentTitle
+                                        }
+                                    >
+                                        Доход
+                                    </div>
+                                    <div
+                                        className={
+                                            styles.audienceTableContentText
+                                        }
+                                    >
+                                        91 % высокий /выше среднего
                                     </div>
                                 </div>
                             </div>
@@ -144,37 +158,7 @@ export const IrkutskShanson = () => {
                             Территория вещания
                         </div>
                         <div className={styles.table}>
-                            <div className={styles.tableRow}>
-                                г. Иркутск, Иркутский район, гг. Иркутск,
-                                Байкальск, Усолье Сибирское, Черемхово, Залари,
-                                Саянск, Куйтун, Тулун, Покосное, Нижнеудинск,
-                                Алзамай, Тайшет.  (население – 1 040 тыс.
-                                человек).
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.tableContainer}>
-                        <div className={styles.tableTitle}>
-                            Технический охват телеканала
-                        </div>
-                        <div className={styles.table}>
-                            <div className={styles.tableRow}>
-                                Все кабельные операторы города + Ростелеком,
-                                Дом.ру (область), в интернете –  24-часовая
-                                трансляция на сайте nts-tv.ru
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.tableContainer}>
-                        <div className={styles.tableTitle}>
-                            Охват слушателей
-                        </div>
-                        <div className={styles.table}>
-                            <div className={styles.tableRow}>
-                                Среднесуточный охват в Иркутске по данным
-                                Mediascope (март-апрель 2023) - 35 600
-                                слушателей.
-                            </div>
+                            <div className={styles.tableRow}>Иркутск</div>
                         </div>
                     </div>
                 </div>

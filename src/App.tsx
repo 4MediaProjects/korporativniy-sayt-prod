@@ -36,6 +36,10 @@ import { JivemVNijnemInfoPortal } from './components/Livennov/JivemVNijnemInfoPo
 import { Navigate, Route, Router, Routes } from 'react-router-dom';
 import { KomandaPage } from './components/KomandaPage/KomandaPage';
 import { BlankPage } from './components/BlankPage/BlankPage';
+import { IrkutskInfoPortal } from './components/Irkutsk/IrkutskInfoPortal';
+import { PerviyBaikalskiyInfoPortal } from './components/PerviyBaikalskiy/PerviyBaikalskiyInfoPortal';
+import { PerviyBaikalskiyAvtoradio } from './components/PerviyBaikalskiy/PerviyBaikalskiyAvtoradio';
+import { PerviyBaikalskiyShanson } from './components/PerviyBaikalskiy/PerviyBaikalskiyShanson';
 
 function App() {
     return (
@@ -96,6 +100,10 @@ function App() {
                 <Route path="/irkutsk/tg-channel" element={<IrkutskTG />} />
                 <Route path="/irkutsk/tv" element={<IrkutskTV />} />
                 <Route path="/irkutsk/vk-group" element={<IrkutskVK />} />
+                <Route
+                    path="/irkutsk/info-portal"
+                    element={<IrkutskInfoPortal />}
+                />
 
                 <Route
                     path="/krasnoyarsk/info-portal"
@@ -113,6 +121,18 @@ function App() {
                 <Route
                     path="/krasnoyarsk/vk-group"
                     element={<KrasnoyarskVK />}
+                />
+                <Route
+                    path="/perviyBaikalskiy/info-portal"
+                    element={<PerviyBaikalskiyInfoPortal />}
+                />
+                <Route
+                    path="/perviyBaikalskiy/avtoradio"
+                    element={<PerviyBaikalskiyAvtoradio />}
+                />
+                <Route
+                    path="/perviyBaikalskiy/shanson"
+                    element={<PerviyBaikalskiyShanson />}
                 />
                 <Route path="*" element={<Navigate to="/" />} />
                 <Route path="/blank" element={<BlankPage />} />

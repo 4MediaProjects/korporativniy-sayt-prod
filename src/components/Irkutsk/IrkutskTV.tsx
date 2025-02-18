@@ -35,6 +35,12 @@ export const IrkutskTV = () => {
             <div className={styles.linksListContainer}>
                 <button
                     className={styles.link}
+                    onClick={() => navigate('/irkutsk/info-portal')}
+                >
+                    Информационный портал
+                </button>
+                <button
+                    className={styles.link}
                     onClick={() => navigate('/irkutsk/tg-channel')}
                 >
                     Телеграм-канал
@@ -85,36 +91,11 @@ export const IrkutskTV = () => {
                 </div>
                 <div className={styles.tablesContainer}>
                     <div className={styles.tablesTitle}>
-                        Телеканал создан в 2020 году. В 2021 году телеканал
-                        получил «22» кнопку.
+                        Новости, сюжеты, передачи, интервью, прогноз погоды,
+                        реклама, фильмы и сериалы (обязательный общедоступный
+                        муниципальный телеканал Иркутска с собственным
+                        ежедневным круглосуточным вещанием)
                     </div>
-                    <div className={styles.tablesTitle}>
-                        Имеет статус: Муниципальный обязательный общедоступный
-                        телеканал
-                    </div>
-                    <div className={styles.tablesTitle}>
-                        Направление вещания: Информационно-развлекательное.
-                    </div>
-                    <div className={styles.tablesTitle}>
-                        Флагманский продукт: Программа "Новости по будням"
-                        (новости региона) выходит ежедневно. В выходные —
-                        повторы программы.
-                    </div>
-                    <div className={styles.tablesTitle}>
-                        Другие программы: Ежемесячная программа "Живой Звук"
-                        (совместно с радио Шансон). аз в месяц — программа
-                        "Культурная программа" (по заказу Министерства
-                        культуры).
-                    </div>
-                    <div className={styles.tablesTitle}>
-                        Закупной контент составляет 75% ежемесячно:
-                    </div>
-                    <div className={styles.tablesTitle}>- Фильмы</div>
-                    <div className={styles.tablesTitle}>- Сериалы</div>
-                    <div className={styles.tablesTitle}>- Документалистика</div>
-                    <div className={styles.tablesTitle}>- Шоу</div>
-                    <div className={styles.tablesTitle}>- Концерты</div>
-                    <div className={styles.tablesTitle}>- Мультфильмы</div>
                     <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Аудитория</div>
                         <div className={styles.audienceTable}>
@@ -132,7 +113,7 @@ export const IrkutskTV = () => {
                                             styles.audienceTableContentText
                                         }
                                     >
-                                        45+ лет
+                                        40+ лет
                                     </div>
                                 </div>
 
@@ -149,7 +130,7 @@ export const IrkutskTV = () => {
                                             styles.audienceTableContentText
                                         }
                                     >
-                                        60% мужчины 40% женщины
+                                        45% мужчины 55% женщины
                                     </div>
                                 </div>
                             </div>
@@ -161,23 +142,7 @@ export const IrkutskTV = () => {
                         </div>
                         <div className={styles.table}>
                             <div className={styles.tableRow}>
-                                Иркутск, Иркутская область
-                            </div>
-                            <div className={styles.tableRow}>
-                                Среднесуточный охват по данным Медиахилс – 35574
-                                зрителя (январь-май 2024)
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.tableContainer}>
-                        <div className={styles.tableTitle}>
-                            Технический охват телеканала
-                        </div>
-                        <div className={styles.table}>
-                            <div className={styles.tableRow}>
-                                Все кабельные операторы города + Ростелеком,
-                                Дом.ру (область), в интернете – 24-часовая
-                                трансляция на сайте nts-tv.ru
+                                Иркутск и Иркутская область
                             </div>
                         </div>
                     </div>
@@ -185,8 +150,7 @@ export const IrkutskTV = () => {
                         <div className={styles.tableTitle}>Охват зрителей</div>
                         <div className={styles.table}>
                             <div className={styles.tableRow}>
-                                Доля по медиахилс (январь-июнь 2024 г.) - 0,86,
-                                охват - 62 тыс. чел.
+                                более 250 000 ежедневно.
                             </div>
                         </div>
                     </div>

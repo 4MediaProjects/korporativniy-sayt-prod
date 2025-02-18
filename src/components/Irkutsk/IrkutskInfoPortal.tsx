@@ -1,7 +1,7 @@
 import styles from '../../shared/cityPage.module.scss';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-export const IrkutskTG = () => {
+export const IrkutskInfoPortal = () => {
     const [isMobile, setIsMobile] = useState(false);
 
     const navigate = useNavigate();
@@ -34,13 +34,13 @@ export const IrkutskTG = () => {
 
             <div className={styles.linksListContainer}>
                 <button
-                    className={styles.link}
+                    className={`${styles.link} ${styles.active}`}
                     onClick={() => navigate('/irkutsk/info-portal')}
                 >
                     Информационный портал
                 </button>
                 <button
-                    className={`${styles.link} ${styles.active}`}
+                    className={styles.link}
                     onClick={() => navigate('/irkutsk/tg-channel')}
                 >
                     Телеграм-канал
@@ -72,9 +72,7 @@ export const IrkutskTG = () => {
             </div>
             <div className={styles.contentContainer}>
                 <div className={styles.cardImageButtonsContainer}>
-                    <div className={styles.cardImageButtonsTitle}>
-                        Телеграм-канал НТС
-                    </div>
+                    <div className={styles.cardImageButtonsTitle}>Сайт НТС</div>
                     <img
                         src={`/blankImage.svg`}
                         alt="blankImage"
@@ -91,47 +89,31 @@ export const IrkutskTG = () => {
                 </div>
                 <div className={styles.tablesContainer}>
                     <div className={styles.tablesTitle}>
-                        Официальный канал Нового телевидения Сибири. Все самое
-                        важное и интересное в Иркутске и Иркутской области
+                        Жизнь региона в режиме онлайн: информационное агентство
+                        (тематика: информационный, региональный) соцсети издания
+                        (ТГ, ВК, ОК, Дзен)
                     </div>
-                    <div className={styles.tableContainer}></div>
+
                     <div className={styles.tableContainer}>
-                        <div className={styles.tableTitle}>Статистика</div>
+                        <div className={styles.tableTitle}>Охват аудитории</div>
                         <div className={styles.table}>
                             <div className={styles.tableRow}>
-                                4 942 подписчика
+                                Просмотры: более 280 000/мес.
                             </div>
                             <div className={styles.tableRow}>
-                                1,9% вовлеченность
+                                Посетители: более 100 000/мес.
                             </div>
                             <div className={styles.tableRow}>
-                                1 202 – средний охват публикации
+                                ТГ: более 6 000 подписчиков
                             </div>
                             <div className={styles.tableRow}>
-                                1324 - рекламный охват
+                                ВК: более 53 000 подписчиков
                             </div>
                             <div className={styles.tableRow}>
-                                27% подписчиков читают посты в первые 24 часа
-                                после публикации
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.tableContainer}>
-                        <div className={styles.tableTitle}>
-                            Рекламные возможности
-                        </div>
-                        <div className={styles.table}>
-                            <div className={styles.tableRow}>
-                                Пост в канале (текст и оформление заказчика или
-                                наш пост по ТЗ заказчика)
+                                ОК: более 2 000 подписчиков
                             </div>
                             <div className={styles.tableRow}>
-                                Репост публикации заказчика
-                            </div>
-                            <div className={styles.tableRow}>
-                                Нативная реклама (упоминание в наших постах
-                                (бренд, персона) или ссылка на материалы
-                                заказчика в наших постах)
+                                Дзен: более 2 700 подписчиков.
                             </div>
                         </div>
                     </div>
