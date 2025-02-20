@@ -13,6 +13,7 @@ body {
   gap:100px;
   max-width: 2000px;
   margin: 0 auto;
+  overflow: auto;
 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
@@ -32,18 +33,19 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  max-width: 500px;
+  width: 500px;
   z-index: 2;
   @media (max-width: 768px) {
+    width: auto;
     justify-content: center;
     align-items: center;
   }
   .mainText{
 
     z-index: 2;
-    font-size: 128px;
+    font-size: clamp(40px, 8vw, 128px);
     font-weight: 400;
-    line-height: 128px;
+    line-height: 1;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
@@ -59,9 +61,9 @@ body {
   .secondaryText{
 
     z-index: 2;
-    font-size: 48px;
+    font-size: clamp(28px, 4vw, 48px);
     font-weight: 400;
-    line-height: 48px;
+    line-height: 1;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
@@ -88,9 +90,9 @@ body {
   }
   .thirdlyText{
     z-index: 2;
-    font-size: 24px;
+    font-size: clamp(18px, 2vw, 24px);
     font-weight: 400;
-    line-height: 29.05px;
+    line-height: 1.2;
     text-align: left;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
@@ -263,6 +265,7 @@ span{
 .img{
   width: 85%;
   height: 700px;
+  margin-top: -70px;
   @media (max-width: 768px) {
     width: 350px;
     height: 170.92px;
@@ -311,6 +314,41 @@ span{
   }
 }
 
+@media (min-width: 1550px) and (max-width: 1570px) {
+  .textNumberEnum {
+    left: 1050px;
+  }
+  .textNumberContainer:nth-child(4) {
+    --offset: 120px;
+  }
+}
+
+@media (min-width: 1600px) and (max-width: 1610px) {
+  .textNumberEnum {
+    left: 1080px;
+  }
+  .textNumberContainer:nth-child(4) {
+    --offset: 120px;
+  }
+}
+
+@media (min-width: 1610px) and (max-width: 1650px) {
+  .textNumberEnum {
+    left: 1090px;
+  }
+  .textNumberContainer:nth-child(4) {
+    --offset: 120px;
+  }
+}
+
+@media (min-width: 1651px) and (max-width: 1699px) {
+  .textNumberEnum {
+    left: 1120px;
+  }
+  .textNumberContainer:nth-child(4) {
+    --offset: 120px;
+  }
+}
 @media (min-width: 1700px) {
   .textNumberEnum {
     left: 1150px;
@@ -340,7 +378,85 @@ span{
   }
 }
 
+@media (max-width: 1599px) {
+  .textNumberEnum {
+    left: 1070px;
+  }
+  .textNumberContainer:nth-child(4) {
+    --offset: 100px;
+  }
+}
+@media (min-width: 1521px) and (max-width: 1550px) {
+  .textNumberEnum {
+    left: 1030px;
+  }
+  .textNumberContainer:nth-child(4) {
+    --offset: 100px;
+  }
+}
 
+@media (min-width: 1491px) and (max-width: 1520px) {
+  .textNumberEnum {
+    left: 1015px;
+  }
+  .textNumberContainer:nth-child(4) {
+    --offset: 100px;
+  }
+}
+
+@media (min-width: 1461px) and (max-width: 1490px) {
+  .textNumberEnum {
+    left: 995px;
+  }
+  .textNumberContainer:nth-child(4) {
+    --offset: 100px;
+  }
+}
+
+@media (min-width: 1441px) and (max-width: 1460px) {
+  .textNumberEnum {
+    left: 985px;
+  }
+  .textNumberContainer:nth-child(4) {
+    --offset: 100px;
+  }
+}
+
+@media (min-width: 1401px) and (max-width: 1440px) {
+  .textNumberEnum {
+    left: 965px;
+  }
+  .textNumberContainer:nth-child(4) {
+    --offset: 100px;
+  }
+}
+
+@media (min-width: 1381px) and (max-width: 1400px) {
+  .textNumberEnum {
+    left: 960px;
+  }
+  .textNumberContainer:nth-child(4) {
+    --offset: 100px;
+  }
+}
+
+@media (min-width: 1341px) and (max-width: 1380px) {
+  .textNumberEnum {
+    left: 930px;
+  }
+  .textNumberContainer:nth-child(4) {
+    --offset: 100px;
+  }
+}
+
+@media (min-width: 1300px) and (max-width: 1340px) {
+  .textNumberEnum {
+    left: 900px;
+  }
+  .textNumberContainer:nth-child(4) {
+    --offset: 100px;
+  }
+}
 
 @media (max-width: 1300px) {
   .textNumberEnum {
@@ -350,6 +466,8 @@ span{
     --offset: 100px;
   }
 }
+
+
 
 @media (max-width: 768px) {
   .textNumberEnum {
@@ -393,7 +511,7 @@ span{
   word-wrap: break-word;
   overflow-wrap: break-word;
   white-space: normal;
-  @media (max-width: 1300px) {
+  @media (max-width: 1450px) {
       font-size: 15px;
       line-height: 24px;
     }
@@ -413,8 +531,5 @@ span{
   max-width: 1200px;
   max-height: 800px;
   z-index: 1;
-  @media (max-width: 1300px) {
-    display: none;
-  }
 }
 

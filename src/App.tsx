@@ -1,4 +1,3 @@
-import styles from './App.module.scss';
 import './index.scss';
 import Header from './widgets/ui/Header';
 import MainPageBody from './components/MainPageBody';
