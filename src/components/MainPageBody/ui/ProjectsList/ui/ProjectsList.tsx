@@ -7,7 +7,7 @@ interface IProject {
     secondaryText: string;
     linksList: any[];
     buttonText: string;
-    buttonLink:string;
+    buttonLink: string;
 }
 
 interface IProjectsListProps {
@@ -15,7 +15,7 @@ interface IProjectsListProps {
 }
 
 export const ProjectsList = ({ projects }: IProjectsListProps) => {
-    const navigate = useNavigate()
+    const navigate = useNavigate();
     return (
         <div className={styles.container}>
             <div className={styles.title}>Проекты</div>
@@ -52,7 +52,9 @@ export const ProjectsList = ({ projects }: IProjectsListProps) => {
                                 <div className={styles.buttonList}>
                                     <button
                                         className={styles.reverseOrangeButton}
-                                        onClick={() => navigate(project.buttonLink)}
+                                        onClick={() =>
+                                            navigate(project.buttonLink)
+                                        }
                                     >
                                         Подробнее
                                     </button>

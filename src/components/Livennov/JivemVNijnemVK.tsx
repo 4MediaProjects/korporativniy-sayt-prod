@@ -1,20 +1,31 @@
 import styles from '../../shared/cityPage.module.scss';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 export const JivemVNijnemVK = () => {
     const [isMobile, setIsMobile] = useState(false);
-
     const navigate = useNavigate();
+    const audienceRef = useRef(null);
+
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
         };
 
         handleResize();
-
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    useEffect(() => {
+        if (audienceRef.current) {
+            audienceRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+    }, []);
+
     return (
         <div className={styles.container}>
             <div className={styles.headerContainer}>
@@ -83,7 +94,7 @@ export const JivemVNijnemVK = () => {
                         также обращаемся к эстетике города и его культурной
                         жизни.
                     </div>
-                    <div className={styles.tableContainer}>
+                    <div className={styles.tableContainer} ref={audienceRef}>
                         <div className={styles.tableTitle}>Аудитория</div>
                         <div className={styles.audienceTable}>
                             <div className={styles.audienceTableContent}>

@@ -1,20 +1,31 @@
 import styles from '../../shared/cityPage.module.scss';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 export const IrkutskShanson = () => {
     const [isMobile, setIsMobile] = useState(false);
-
     const navigate = useNavigate();
+    const audienceRef = useRef(null);
+
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
         };
 
         handleResize();
-
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    useEffect(() => {
+        if (audienceRef.current) {
+            audienceRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+    }, []);
+
     return (
         <div className={styles.container}>
             <div className={styles.headerContainer}>
@@ -70,6 +81,7 @@ export const IrkutskShanson = () => {
                     Радио Шансон Иркутск
                 </button>
             </div>
+
             <div className={styles.contentContainer}>
                 <div className={styles.cardImageButtonsContainer}>
                     <div className={styles.cardImageButtonsTitle}>
@@ -89,6 +101,7 @@ export const IrkutskShanson = () => {
                         </button>
                     </div>
                 </div>
+
                 <div className={styles.tablesContainer}>
                     <div className={styles.tablesTitle}>
                         Крупнейшая радиостанция России, с 24-летним стажем
@@ -99,7 +112,8 @@ export const IrkutskShanson = () => {
                         Программы собственного производства: Иркутские новости,
                         Прогноз погоды, Шансономания, Живой звук, Хит Шансона.
                     </div>
-                    <div className={styles.tableContainer}>
+
+                    <div className={styles.tableContainer} ref={audienceRef}>
                         <div className={styles.tableTitle}>Аудитория</div>
                         <div className={styles.audienceTable}>
                             <div className={styles.audienceTableContent}>
@@ -119,7 +133,6 @@ export const IrkutskShanson = () => {
                                         35 - 59 лет
                                     </div>
                                 </div>
-
                                 <div className={styles.audienceTableCell}>
                                     <div
                                         className={
@@ -133,12 +146,13 @@ export const IrkutskShanson = () => {
                                             styles.audienceTableContentText
                                         }
                                     >
-                                        53% мужчины 47 % женщины
+                                        53% мужчины 47% женщины
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
                     <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>
                             Территория вещания
@@ -148,11 +162,12 @@ export const IrkutskShanson = () => {
                                 г. Иркутск, Иркутский район, гг. Иркутск,
                                 Байкальск, Усолье Сибирское, Черемхово, Залари,
                                 Саянск, Куйтун, Тулун, Покосное, Нижнеудинск,
-                                Алзамай, Тайшет.  (население – 1 040 тыс.
+                                Алзамай, Тайшет. (население – 1 040 тыс.
                                 человек).
                             </div>
                         </div>
                     </div>
+
                     <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>
                             Технический охват телеканала
@@ -160,11 +175,12 @@ export const IrkutskShanson = () => {
                         <div className={styles.table}>
                             <div className={styles.tableRow}>
                                 Все кабельные операторы города + Ростелеком,
-                                Дом.ру (область), в интернете –  24-часовая
+                                Дом.ру (область), в интернете – 24-часовая
                                 трансляция на сайте nts-tv.ru
                             </div>
                         </div>
                     </div>
+
                     <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>
                             Охват слушателей

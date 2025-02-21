@@ -1,20 +1,31 @@
 import styles from '../../shared/cityPage.module.scss';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 export const IrkutskInfoPortal = () => {
     const [isMobile, setIsMobile] = useState(false);
-
     const navigate = useNavigate();
+    const tableRef = useRef(null);
+
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
         };
 
         handleResize();
-
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    useEffect(() => {
+        if (tableRef.current) {
+            tableRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+    }, []);
+
     return (
         <div className={styles.container}>
             <div className={styles.headerContainer}>
@@ -70,6 +81,7 @@ export const IrkutskInfoPortal = () => {
                     Радио Шансон Иркутск
                 </button>
             </div>
+
             <div className={styles.contentContainer}>
                 <div className={styles.cardImageButtonsContainer}>
                     <div className={styles.cardImageButtonsTitle}>Сайт НТС</div>
@@ -87,7 +99,8 @@ export const IrkutskInfoPortal = () => {
                         </button>
                     </div>
                 </div>
-                <div className={styles.tablesContainer}>
+
+                <div className={styles.tablesContainer} ref={tableRef}>
                     <div className={styles.tablesTitle}>
                         Жизнь региона в режиме онлайн: информационное агентство
                         (тематика: информационный, региональный) соцсети издания
@@ -101,19 +114,19 @@ export const IrkutskInfoPortal = () => {
                                 Просмотры: более 280 000/мес.
                             </div>
                             <div className={styles.tableRow}>
-                                Посетители: более 100 000/мес.
+                                Посетители: более 100 000/мес.
                             </div>
                             <div className={styles.tableRow}>
-                                ТГ: более 6 000 подписчиков
+                                ТГ: более 6 000 подписчиков
                             </div>
                             <div className={styles.tableRow}>
-                                ВК: более 53 000 подписчиков
+                                ВК: более 53 000 подписчиков
                             </div>
                             <div className={styles.tableRow}>
-                                ОК: более 2 000 подписчиков
+                                ОК: более 2 000 подписчиков
                             </div>
                             <div className={styles.tableRow}>
-                                Дзен: более 2 700 подписчиков.
+                                Дзен: более 2 700 подписчиков.
                             </div>
                         </div>
                     </div>

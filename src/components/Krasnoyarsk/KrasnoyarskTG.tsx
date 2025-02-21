@@ -1,20 +1,31 @@
 import styles from '../../shared/cityPage.module.scss';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 export const KrasnoyarskTG = () => {
     const [isMobile, setIsMobile] = useState(false);
-
     const navigate = useNavigate();
+    const statisticsRef = useRef(null);
+
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
         };
 
         handleResize();
-
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    useEffect(() => {
+        if (statisticsRef.current) {
+            statisticsRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+    }, []);
+
     return (
         <div className={styles.container}>
             <div className={styles.headerContainer}>
@@ -88,7 +99,7 @@ export const KrasnoyarskTG = () => {
                         «Прима» — самые актуальные и интересные события
                         Красноярска и края.
                     </div>
-                    <div className={styles.tableContainer}>
+                    <div className={styles.tableContainer} ref={statisticsRef}>
                         <div className={styles.tableTitle}>Статистика</div>
                         <div className={styles.table}>
                             <div className={styles.tableRow}>

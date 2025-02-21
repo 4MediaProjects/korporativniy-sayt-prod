@@ -1,20 +1,31 @@
 import styles from '../../shared/cityPage.module.scss';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 export const JivemVNijnemInfoPortal = () => {
     const [isMobile, setIsMobile] = useState(false);
-
     const navigate = useNavigate();
+    const audienceRef = useRef(null);
+
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
         };
 
         handleResize();
-
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    useEffect(() => {
+        if (audienceRef.current) {
+            audienceRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+    }, []);
+
     return (
         <div className={styles.container}>
             <div className={styles.headerContainer}>
@@ -60,7 +71,7 @@ export const JivemVNijnemInfoPortal = () => {
             <div className={styles.contentContainer}>
                 <div className={styles.cardImageButtonsContainer}>
                     <div className={styles.cardImageButtonsTitle}>
-                        Информационный потал «Живем в Нижнем»
+                        Информационный портал «Живем в Нижнем»
                     </div>
                     <img
                         src={`/jivemVNijnemInfoPortal.svg`}
@@ -83,7 +94,8 @@ export const JivemVNijnemInfoPortal = () => {
                         области. Ежемесячная аудитория - более 1 млн уникальных
                         посетителей
                     </div>
-                    <div className={styles.tableContainer}>
+
+                    <div className={styles.tableContainer} ref={audienceRef}>
                         <div className={styles.tableTitle}>Аудитория</div>
                         <div className={styles.audienceTable}>
                             <div className={styles.audienceTableContent}>
@@ -123,6 +135,7 @@ export const JivemVNijnemInfoPortal = () => {
                             </div>
                         </div>
                     </div>
+
                     <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Статистика</div>
                         <div className={styles.table}>

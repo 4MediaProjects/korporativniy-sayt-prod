@@ -1,11 +1,12 @@
 import styles from '../../shared/cityPage.module.scss';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export const KrasnoyarskRadio = () => {
     const [isMobile, setIsMobile] = useState(false);
-
     const navigate = useNavigate();
+    const viewerReachRef = useRef(null);
+
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
@@ -16,6 +17,16 @@ export const KrasnoyarskRadio = () => {
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    useEffect(() => {
+        if (viewerReachRef.current) {
+            viewerReachRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+    }, []);
+
     return (
         <div className={styles.container}>
             <div className={styles.headerContainer}>
@@ -99,9 +110,9 @@ export const KrasnoyarskRadio = () => {
                     </div>
                     <div className={styles.tablesTitle}>
                         Одной из программ, являющейся визитной карточкой эфира -
-                        является утреннее шоу “Зажигание”
+                        является утреннее шоу “Зажигание”.
                     </div>
-                    <div className={styles.tableContainer}>
+                    <div className={styles.tableContainer} ref={viewerReachRef}>
                         <div className={styles.tableTitle}>Аудитория</div>
                         <div className={styles.audienceTable}>
                             <div className={styles.audienceTableContent}>
@@ -165,7 +176,7 @@ export const KrasnoyarskRadio = () => {
                                 Красноярск и пригород. Передатчик 3 кВт, точка
                                 вещания - мачта РТРС, умные колонки Алиса, Сбер,
                                 Маруся, индустриальный медиаплеер, сайт 1028.fm
-                                и иные открытые ресурсы в интернете
+                                и иные открытые ресурсы в интернете.
                             </div>
                         </div>
                     </div>

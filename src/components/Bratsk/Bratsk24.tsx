@@ -1,10 +1,11 @@
 import styles from '../../shared/cityPage.module.scss';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 export const Bratsk24 = () => {
     const [isMobile, setIsMobile] = useState(false);
 
     const navigate = useNavigate();
+    const statsRef = useRef(null);
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
@@ -14,6 +15,14 @@ export const Bratsk24 = () => {
 
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
+    }, []);
+    useEffect(() => {
+        if (statsRef.current) {
+            statsRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
     }, []);
     return (
         <div className={styles.container}>
@@ -140,7 +149,7 @@ export const Bratsk24 = () => {
                         Программа входит в ТОП-20 самых цитируемых СМИ Иркутской
                         области (Медиалогия)
                     </div>
-                    <div className={styles.tableContainer}>
+                    <div className={styles.tableContainer} ref={statsRef}>
                         <div className={styles.tableTitle}>Аудитория</div>
                         <div className={styles.audienceTable}>
                             <div className={styles.audienceTableContent}>

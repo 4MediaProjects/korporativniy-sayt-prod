@@ -1,11 +1,12 @@
 import styles from '../../shared/cityPage.module.scss';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export const AchinskTV = () => {
     const [isMobile, setIsMobile] = useState(false);
-
     const navigate = useNavigate();
+    const viewerReachRef = useRef(null);
+
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
@@ -16,6 +17,16 @@ export const AchinskTV = () => {
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    useEffect(() => {
+        if (viewerReachRef.current) {
+            viewerReachRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+    }, []);
+
     return (
         <div className={styles.container}>
             <div className={styles.headerContainer}>
@@ -106,7 +117,7 @@ export const AchinskTV = () => {
                     </div>
                     <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Охват зрителей</div>
-                        <div className={styles.table}>
+                        <div className={styles.table} ref={viewerReachRef}>
                             <div className={styles.tableRow}>
                                 Ежедневный охват телеканала АТВ: более 11 000
                                 телезрителей.

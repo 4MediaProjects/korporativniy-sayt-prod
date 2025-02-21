@@ -1,11 +1,12 @@
 import styles from '../../shared/cityPage.module.scss';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export const AbakanTG = () => {
     const [isMobile, setIsMobile] = useState(false);
 
     const navigate = useNavigate();
+    const statsRef = useRef(null);
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
@@ -15,6 +16,14 @@ export const AbakanTG = () => {
 
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
+    }, []);
+    useEffect(() => {
+        if (statsRef.current) {
+            statsRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
     }, []);
     return (
         <div className={styles.container}>
@@ -94,7 +103,7 @@ export const AbakanTG = () => {
                     <div className={styles.tablesTitle}>
                         NotaBene. Главные новости Абакана и Хакасии
                     </div>
-                    <div className={styles.tableContainer}>
+                    <div className={styles.tableContainer} ref={statsRef}>
                         <div className={styles.tableTitle}>Статистика</div>
                         <div className={styles.table}>
                             <div className={styles.tableRow}>

@@ -1,11 +1,12 @@
 import styles from '../../shared/cityPage.module.scss';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 export const KrasnoyarskTV = () => {
     const [isMobile, setIsMobile] = useState(false);
-
     const navigate = useNavigate();
+    const viewerReachRef = useRef(null);
+
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
@@ -16,6 +17,16 @@ export const KrasnoyarskTV = () => {
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    useEffect(() => {
+        if (viewerReachRef.current) {
+            viewerReachRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+    }, []);
+
     return (
         <div className={styles.container}>
             <div className={styles.headerContainer}>
@@ -87,7 +98,7 @@ export const KrasnoyarskTV = () => {
                 <div className={styles.tablesContainer}>
                     <div className={styles.tablesTitle}>
                         Первый негосударственный телеканал в Красноярске и один
-                        из первых частных в стране. Основан в 1991 году.  Сейчас
+                        из первых частных в стране. Основан в 1991 году. Сейчас
                         «Прима» это 24 часа вещания в HD в сетях всех кабельных
                         операторов Красноярска и пригорода, а также в сети
                         Ростелеком в 200 населенных пунктах Красноярского края.
@@ -128,11 +139,11 @@ export const KrasnoyarskTV = () => {
                                 Все кабельные операторы города, абоненты
                                 Ростелекома в крае, стриминговые сервисы,
                                 приложение для iOs и Android и другие ресурсы в
-                                интернете
+                                интернете.
                             </div>
                         </div>
                     </div>
-                    <div className={styles.tableContainer}>
+                    <div className={styles.tableContainer} ref={viewerReachRef}>
                         <div className={styles.tableTitle}>Охват зрителей</div>
                         <div className={styles.table}>
                             <div className={styles.tableRow}>

@@ -1,20 +1,31 @@
 import styles from '../../shared/cityPage.module.scss';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 export const IrkutskTV = () => {
     const [isMobile, setIsMobile] = useState(false);
-
     const navigate = useNavigate();
+    const audienceRef = useRef(null);
+
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
         };
 
         handleResize();
-
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    useEffect(() => {
+        if (audienceRef.current) {
+            audienceRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+    }, []);
+
     return (
         <div className={styles.container}>
             <div className={styles.headerContainer}>
@@ -70,6 +81,7 @@ export const IrkutskTV = () => {
                     Радио Шансон Иркутск
                 </button>
             </div>
+
             <div className={styles.contentContainer}>
                 <div className={styles.cardImageButtonsContainer}>
                     <div className={styles.cardImageButtonsTitle}>
@@ -89,6 +101,7 @@ export const IrkutskTV = () => {
                         </button>
                     </div>
                 </div>
+
                 <div className={styles.tablesContainer}>
                     <div className={styles.tablesTitle}>
                         Новости, сюжеты, передачи, интервью, прогноз погоды,
@@ -96,7 +109,8 @@ export const IrkutskTV = () => {
                         муниципальный телеканал Иркутска с собственным
                         ежедневным круглосуточным вещанием)
                     </div>
-                    <div className={styles.tableContainer}>
+
+                    <div className={styles.tableContainer} ref={audienceRef}>
                         <div className={styles.tableTitle}>Аудитория</div>
                         <div className={styles.audienceTable}>
                             <div className={styles.audienceTableContent}>
@@ -116,7 +130,6 @@ export const IrkutskTV = () => {
                                         40+ лет
                                     </div>
                                 </div>
-
                                 <div className={styles.audienceTableCell}>
                                     <div
                                         className={
@@ -136,6 +149,7 @@ export const IrkutskTV = () => {
                             </div>
                         </div>
                     </div>
+
                     <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>
                             Территория вещания
@@ -146,11 +160,12 @@ export const IrkutskTV = () => {
                             </div>
                         </div>
                     </div>
+
                     <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Охват зрителей</div>
                         <div className={styles.table}>
                             <div className={styles.tableRow}>
-                                более 250 000 ежедневно.
+                                более 250 000 ежедневно.
                             </div>
                         </div>
                     </div>

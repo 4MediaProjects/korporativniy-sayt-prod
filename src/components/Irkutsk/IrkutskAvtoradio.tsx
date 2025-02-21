@@ -1,20 +1,31 @@
 import styles from '../../shared/cityPage.module.scss';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 export const IrkutskAvtoradio = () => {
     const [isMobile, setIsMobile] = useState(false);
-
     const navigate = useNavigate();
+    const audienceRef = useRef(null);
+
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
         };
 
         handleResize();
-
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    useEffect(() => {
+        if (audienceRef.current) {
+            audienceRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+    }, []);
+
     return (
         <div className={styles.container}>
             <div className={styles.headerContainer}>
@@ -70,6 +81,7 @@ export const IrkutskAvtoradio = () => {
                     Радио Шансон Иркутск
                 </button>
             </div>
+
             <div className={styles.contentContainer}>
                 <div className={styles.cardImageButtonsContainer}>
                     <div className={styles.cardImageButtonsTitle}>
@@ -89,6 +101,7 @@ export const IrkutskAvtoradio = () => {
                         </button>
                     </div>
                 </div>
+
                 <div className={styles.tablesContainer}>
                     <div className={styles.tablesTitle}>
                         Крупнейшая радиостанция России, с более, чем 30-летним
@@ -100,7 +113,7 @@ export const IrkutskAvtoradio = () => {
                         Прогноз погоды, Автомонитор, Праздник каждый день.
                     </div>
 
-                    <div className={styles.tableContainer}>
+                    <div className={styles.tableContainer} ref={audienceRef}>
                         <div className={styles.tableTitle}>Аудитория</div>
                         <div className={styles.audienceTable}>
                             <div className={styles.audienceTableContent}>
@@ -120,7 +133,6 @@ export const IrkutskAvtoradio = () => {
                                         25-55 лет
                                     </div>
                                 </div>
-
                                 <div className={styles.audienceTableCell}>
                                     <div
                                         className={
@@ -140,6 +152,7 @@ export const IrkutskAvtoradio = () => {
                             </div>
                         </div>
                     </div>
+
                     <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>
                             Территория вещания
@@ -154,6 +167,7 @@ export const IrkutskAvtoradio = () => {
                             </div>
                         </div>
                     </div>
+
                     <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>
                             Охват слушателей

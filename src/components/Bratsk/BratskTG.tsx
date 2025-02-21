@@ -1,10 +1,12 @@
 import styles from '../../shared/cityPage.module.scss';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 export const BratskTG = () => {
     const [isMobile, setIsMobile] = useState(false);
-
     const navigate = useNavigate();
+    const statsRef = useRef(null);
+
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
@@ -15,16 +17,22 @@ export const BratskTG = () => {
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    useEffect(() => {
+        if (statsRef.current) {
+            statsRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+    }, []);
+
     return (
         <div className={styles.container}>
             <div className={styles.headerContainer}>
                 <img
-                    src={
-                        isMobile
-                            ? '/bratskBackground.svg'
-                            : '/bratskBackground.svg'
-                    }
-                    alt="jivemVNijnem"
+                    src="/bratskBackground.svg"
+                    alt="bratskBackground"
                     className={styles.headerImage}
                 />
                 <div className={styles.headerOverlay}>
@@ -106,7 +114,7 @@ export const BratskTG = () => {
                         Телеграм-канал «БСТ»
                     </div>
                     <img
-                        src={`/blankImage.svg`}
+                        src="/blankImage.svg"
                         alt="blankImage"
                         className={styles.image}
                     />
@@ -124,7 +132,7 @@ export const BratskTG = () => {
                         Всё самое важное из жизни Братска, района и области
                     </div>
                     <div className={styles.tableContainer}></div>
-                    <div className={styles.tableContainer}>
+                    <div className={styles.tableContainer} ref={statsRef}>
                         <div className={styles.tableTitle}>Статистика</div>
                         <div className={styles.table}>
                             <div className={styles.tableRow}>

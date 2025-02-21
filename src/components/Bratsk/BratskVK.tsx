@@ -1,10 +1,12 @@
 import styles from '../../shared/cityPage.module.scss';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+
 export const BratskVK = () => {
     const [isMobile, setIsMobile] = useState(false);
-
     const navigate = useNavigate();
+    const statsRef = useRef(null);
+
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
@@ -15,16 +17,22 @@ export const BratskVK = () => {
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    useEffect(() => {
+        if (statsRef.current) {
+            statsRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+    }, []);
+
     return (
         <div className={styles.container}>
             <div className={styles.headerContainer}>
                 <img
-                    src={
-                        isMobile
-                            ? '/bratskBackground.svg'
-                            : '/bratskBackground.svg'
-                    }
-                    alt="jivemVNijnem"
+                    src="/bratskBackground.svg"
+                    alt="bratskBackground"
                     className={styles.headerImage}
                 />
                 <div className={styles.headerOverlay}>
@@ -100,13 +108,14 @@ export const BratskVK = () => {
                     Радио «Пи FM»
                 </button>
             </div>
+
             <div className={styles.contentContainer}>
                 <div className={styles.cardImageButtonsContainer}>
                     <div className={styles.cardImageButtonsTitle}>
                         Группа ВК «БСТ»
                     </div>
                     <img
-                        src={`/blankImage.svg`}
+                        src="/blankImage.svg"
                         alt="blankImage"
                         className={styles.image}
                     />
@@ -119,14 +128,16 @@ export const BratskVK = () => {
                         </button>
                     </div>
                 </div>
+
                 <div className={styles.tablesContainer}>
                     <div className={styles.tablesTitle}>
                         Паблик «БСТ» - социальная сеть одной из самых популярных
                         телекомпаний города Братска. Публикуем актуальные
                         новости, популярные телевизионные сюжеты, а также
                         активно используем инструменты продвижения - клипы,
-                        сторис и авторские подкасты
+                        сторис и авторские подкасты.
                     </div>
+
                     <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Аудитория</div>
                         <div className={styles.audienceTable}>
@@ -147,7 +158,6 @@ export const BratskVK = () => {
                                         30 - 55 лет
                                     </div>
                                 </div>
-
                                 <div className={styles.audienceTableCell}>
                                     <div
                                         className={
@@ -161,27 +171,29 @@ export const BratskVK = () => {
                                             styles.audienceTableContentText
                                         }
                                     >
-                                        43% мужчины 57% женщины
+                                        43% мужчины, 57% женщины
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className={styles.tableContainer}>
+
+                    <div className={styles.tableContainer} ref={statsRef}>
                         <div className={styles.tableTitle}>Статистика</div>
                         <div className={styles.table}>
                             <div className={styles.tableRow}>
-                                30 150 подписчика
+                                30 150 подписчиков
                             </div>
                             <div className={styles.tableRow}>
-                                Средний охват за 3 месяца - 77000 пользователей
+                                Средний охват за 3 месяца – 77 000 пользователей
                                 в месяц
                             </div>
                             <div className={styles.tableRow}>
-                                Средний просмотр одного поста - 2 100 просмотров
+                                Средний просмотр одного поста – 2 100 просмотров
                             </div>
                         </div>
                     </div>
+
                     <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>
                             Рекламные возможности

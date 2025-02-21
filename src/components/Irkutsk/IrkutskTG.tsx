@@ -1,29 +1,36 @@
-import styles from '../../shared/cityPage.module.scss';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import styles from '../../shared/cityPage.module.scss';
+
 export const IrkutskTG = () => {
     const [isMobile, setIsMobile] = useState(false);
-
     const navigate = useNavigate();
+    const tableRef = useRef(null);
+
     useEffect(() => {
         const handleResize = () => {
             setIsMobile(window.innerWidth <= 768);
         };
 
         handleResize();
-
         window.addEventListener('resize', handleResize);
         return () => window.removeEventListener('resize', handleResize);
     }, []);
+
+    useEffect(() => {
+        if (tableRef.current) {
+            tableRef.current.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+            });
+        }
+    }, []);
+
     return (
         <div className={styles.container}>
             <div className={styles.headerContainer}>
                 <img
-                    src={
-                        isMobile
-                            ? '/blankBackground.svg'
-                            : '/blankBackground.svg'
-                    }
+                    src="/blankBackground.svg"
                     alt="blankBackground"
                     className={styles.headerImage}
                 />
@@ -70,13 +77,14 @@ export const IrkutskTG = () => {
                     Радио Шансон Иркутск
                 </button>
             </div>
+
             <div className={styles.contentContainer}>
                 <div className={styles.cardImageButtonsContainer}>
                     <div className={styles.cardImageButtonsTitle}>
                         Телеграм-канал НТС
                     </div>
                     <img
-                        src={`/blankImage.svg`}
+                        src="/blankImage.svg"
                         alt="blankImage"
                         className={styles.image}
                     />
@@ -89,12 +97,13 @@ export const IrkutskTG = () => {
                         </button>
                     </div>
                 </div>
-                <div className={styles.tablesContainer}>
+
+                <div className={styles.tablesContainer} ref={tableRef}>
                     <div className={styles.tablesTitle}>
                         Официальный канал Нового телевидения Сибири. Все самое
                         важное и интересное в Иркутске и Иркутской области
                     </div>
-                    <div className={styles.tableContainer}></div>
+
                     <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Статистика</div>
                         <div className={styles.table}>
@@ -108,7 +117,7 @@ export const IrkutskTG = () => {
                                 1 202 – средний охват публикации
                             </div>
                             <div className={styles.tableRow}>
-                                1324 - рекламный охват
+                                1 324 - рекламный охват
                             </div>
                             <div className={styles.tableRow}>
                                 27% подписчиков читают посты в первые 24 часа
@@ -116,6 +125,7 @@ export const IrkutskTG = () => {
                             </div>
                         </div>
                     </div>
+
                     <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>
                             Рекламные возможности
