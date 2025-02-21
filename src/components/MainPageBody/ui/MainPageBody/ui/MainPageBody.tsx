@@ -17,13 +17,9 @@ const projects = [
         imageName: 'cuban',
         header: 'КубаньИнформ',
         secondaryText: 'Краснодар',
-        linksList: [
-            { href: '/blank', text: 'Интернет-портал' },
-            { href: '/blank', text: 'Социальные сети' },
-            { href: '/blank', text: 'Радио' },
-        ],
+        linksList: [{ href: '/kuban/info-portal', text: 'Интернет-портал' }],
         buttonText: 'подробнее',
-        buttonLink: '/blank',
+        buttonLink: '/kuban/info-portal',
     },
     {
         imageName: 'gorodPrima',

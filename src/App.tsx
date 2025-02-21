@@ -39,6 +39,7 @@ import { IrkutskInfoPortal } from './components/Irkutsk/IrkutskInfoPortal';
 import { PerviyBaikalskiyInfoPortal } from './components/PerviyBaikalskiy/PerviyBaikalskiyInfoPortal';
 import { PerviyBaikalskiyAvtoradio } from './components/PerviyBaikalskiy/PerviyBaikalskiyAvtoradio';
 import { PerviyBaikalskiyShanson } from './components/PerviyBaikalskiy/PerviyBaikalskiyShanson';
+import { KubanInfoPortal } from './components/Kuban/KubanInfoPortal';
 
 function App() {
     return (
@@ -132,6 +133,11 @@ function App() {
                 <Route
                     path="/perviyBaikalskiy/shanson"
                     element={<PerviyBaikalskiyShanson />}
+                />
+
+                <Route
+                    path="/kuban/info-portal"
+                    element={<KubanInfoPortal />}
                 />
                 <Route path="*" element={<Navigate to="/" />} />
                 <Route path="/blank" element={<BlankPage />} />
