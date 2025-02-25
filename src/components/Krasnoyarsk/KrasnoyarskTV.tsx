@@ -95,7 +95,7 @@ export const KrasnoyarskTV = () => {
                         </button>
                     </div>
                 </div>
-                <div className={styles.tablesContainer}>
+                <div className={styles.tablesContainer} ref={viewerReachRef}>
                     <div className={styles.tablesTitle}>
                         Первый негосударственный телеканал в Красноярске и один
                         из первых частных в стране. Основан в 1991 году. Сейчас
@@ -143,7 +143,7 @@ export const KrasnoyarskTV = () => {
                             </div>
                         </div>
                     </div>
-                    <div className={styles.tableContainer} ref={viewerReachRef}>
+                    <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Охват зрителей</div>
                         <div className={styles.table}>
                             <div className={styles.tableRow}>

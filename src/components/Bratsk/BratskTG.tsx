@@ -127,12 +127,12 @@ export const BratskTG = () => {
                         </button>
                     </div>
                 </div>
-                <div className={styles.tablesContainer}>
+                <div className={styles.tablesContainer} ref={statsRef}>
                     <div className={styles.tablesTitle}>
                         Всё самое важное из жизни Братска, района и области
                     </div>
                     <div className={styles.tableContainer}></div>
-                    <div className={styles.tableContainer} ref={statsRef}>
+                    <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Статистика</div>
                         <div className={styles.table}>
                             <div className={styles.tableRow}>

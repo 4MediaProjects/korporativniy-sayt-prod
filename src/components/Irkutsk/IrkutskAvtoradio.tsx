@@ -102,7 +102,7 @@ export const IrkutskAvtoradio = () => {
                     </div>
                 </div>
 
-                <div className={styles.tablesContainer}>
+                <div className={styles.tablesContainer} ref={audienceRef}>
                     <div className={styles.tablesTitle}>
                         Крупнейшая радиостанция России, с более, чем 30-летним
                         стажем работы, занимающая лидирующие позиции в рейтинге
@@ -113,7 +113,7 @@ export const IrkutskAvtoradio = () => {
                         Прогноз погоды, Автомонитор, Праздник каждый день.
                     </div>
 
-                    <div className={styles.tableContainer} ref={audienceRef}>
+                    <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Аудитория</div>
                         <div className={styles.audienceTable}>
                             <div className={styles.audienceTableContent}>

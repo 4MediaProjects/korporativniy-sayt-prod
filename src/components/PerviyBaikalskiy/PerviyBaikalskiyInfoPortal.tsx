@@ -80,13 +80,13 @@ export const PerviyBaikalskiyInfoPortal = () => {
                         </button>
                     </div>
                 </div>
-                <div className={styles.tablesContainer}>
+                <div className={styles.tablesContainer} ref={statsRef}>
                     <div className={styles.tablesTitle}>
                         Важнейшая информация о Байкале, экологии, туризме
                         (тематика: информация о Байкале, экология, туризм)
                         соцсети издания (ТГ, ВК, Дзен)
                     </div>
-                    <div className={styles.tableContainer} ref={statsRef}>
+                    <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Статистика</div>
                         <div className={styles.table}>
                             <div className={styles.tableRow}>

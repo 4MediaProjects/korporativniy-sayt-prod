@@ -110,13 +110,13 @@ export const AbakanRadio = () => {
                         - собственное утреннее шоу «Жесть Утра» с интерактивом и
                         призами;
                     </div>
-                    <div className={styles.tablesTitle}>
+                    <div className={styles.tablesTitle} ref={statsRef}>
                         - информация из мира шоубизнеса;
                     </div>
                     <div className={styles.tablesTitle}>
                         - масштабные внеэфирные проекты.
                     </div>
-                    <div className={styles.tableContainer} ref={statsRef}>
+                    <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Аудитория</div>
                         <div className={styles.audienceTable}>
                             <div className={styles.audienceTableContent}>

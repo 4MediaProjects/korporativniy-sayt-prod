@@ -102,7 +102,7 @@ export const IrkutskShanson = () => {
                     </div>
                 </div>
 
-                <div className={styles.tablesContainer}>
+                <div className={styles.tablesContainer} ref={audienceRef}>
                     <div className={styles.tablesTitle}>
                         Крупнейшая радиостанция России, с 24-летним стажем
                         работы, занимающая лидирующие позиции в рейтинге станций
@@ -113,7 +113,7 @@ export const IrkutskShanson = () => {
                         Прогноз погоды, Шансономания, Живой звук, Хит Шансона.
                     </div>
 
-                    <div className={styles.tableContainer} ref={audienceRef}>
+                    <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Аудитория</div>
                         <div className={styles.audienceTable}>
                             <div className={styles.audienceTableContent}>

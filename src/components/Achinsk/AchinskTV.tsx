@@ -110,14 +110,17 @@ export const AchinskTV = () => {
                             Технический охват телеканала
                         </div>
                         <div className={styles.table}>
-                            <div className={styles.tableRow}>
+                            <div
+                                className={styles.tableRow}
+                                ref={viewerReachRef}
+                            >
                                 г. Абакан, Республика Хакасия, Юг Кр. Края
                             </div>
                         </div>
                     </div>
                     <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Охват зрителей</div>
-                        <div className={styles.table} ref={viewerReachRef}>
+                        <div className={styles.table}>
                             <div className={styles.tableRow}>
                                 Ежедневный охват телеканала АТВ: более 11 000
                                 телезрителей.

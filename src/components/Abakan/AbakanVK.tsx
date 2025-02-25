@@ -99,13 +99,13 @@ export const AbakanVK = () => {
                         </button>
                     </div>
                 </div>
-                <div className={styles.tablesContainer}>
+                <div className={styles.tablesContainer} ref={statsRef}>
                     <div className={styles.tablesTitle}>
                         NotaBene – медийный символ Хакасии. Паблик наполнен
                         авторским контентом, главными новостями региона,
                         журналистскими расследованиями.
                     </div>
-                    <div className={styles.tableContainer} ref={statsRef}>
+                    <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Аудитория</div>
                         <div className={styles.audienceTable}>
                             <div className={styles.audienceTableContent}>

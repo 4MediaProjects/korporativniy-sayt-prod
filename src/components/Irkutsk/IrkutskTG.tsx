@@ -92,13 +92,16 @@ export const IrkutskTG = () => {
                         <button className={styles.orangeButton}>
                             К порталу
                         </button>
-                        <button className={styles.reverseOrangeButton}>
+                        <button
+                            className={styles.reverseOrangeButton}
+                            ref={tableRef}
+                        >
                             Заказать рекламу
                         </button>
                     </div>
                 </div>
 
-                <div className={styles.tablesContainer} ref={tableRef}>
+                <div className={styles.tablesContainer}>
                     <div className={styles.tablesTitle}>
                         Официальный канал Нового телевидения Сибири. Все самое
                         важное и интересное в Иркутске и Иркутской области

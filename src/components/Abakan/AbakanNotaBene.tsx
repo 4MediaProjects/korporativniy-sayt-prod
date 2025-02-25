@@ -94,12 +94,15 @@ export const AbakanNotaBene = () => {
                         <button className={styles.orangeButton}>
                             К порталу
                         </button>
-                        <button className={styles.reverseOrangeButton}>
+                        <button
+                            className={styles.reverseOrangeButton}
+                            ref={statsRef}
+                        >
                             Заказать рекламу
                         </button>
                     </div>
                 </div>
-                <div className={styles.tablesContainer} ref={statsRef}>
+                <div className={styles.tablesContainer}>
                     <div className={styles.tablesTitle}>
                         Программа NotaBene – самый рейтинговый и влиятельный
                         продукт телеканала ТВ7

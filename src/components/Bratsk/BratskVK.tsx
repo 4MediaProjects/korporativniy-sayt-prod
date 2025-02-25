@@ -170,6 +170,7 @@ export const BratskVK = () => {
                                         className={
                                             styles.audienceTableContentText
                                         }
+                                        ref={statsRef}
                                     >
                                         43% мужчины, 57% женщины
                                     </div>
@@ -178,7 +179,7 @@ export const BratskVK = () => {
                         </div>
                     </div>
 
-                    <div className={styles.tableContainer} ref={statsRef}>
+                    <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Статистика</div>
                         <div className={styles.table}>
                             <div className={styles.tableRow}>

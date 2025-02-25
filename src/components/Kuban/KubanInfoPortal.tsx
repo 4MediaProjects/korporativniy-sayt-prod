@@ -69,7 +69,7 @@ export const KubanInfoPortal = () => {
                         </button>
                     </div>
                 </div>
-                <div className={styles.tablesContainer}>
+                <div className={styles.tablesContainer} ref={statsRef}>
                     <div className={styles.tablesTitle}>
                         «Кубань Информ» — информационный портал с самыми
                         актуальными новостями Краснодарского края и России.
@@ -79,7 +79,7 @@ export const KubanInfoPortal = () => {
                         источником объективной и проверенной информации. «Кубань
                         Информ» — это независимый взгляд на события и факты.
                     </div>
-                    <div className={styles.tableContainer} ref={statsRef}>
+                    <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Аудитория</div>
                         <div className={styles.audienceTable}>
                             <div className={styles.audienceTableContent}>

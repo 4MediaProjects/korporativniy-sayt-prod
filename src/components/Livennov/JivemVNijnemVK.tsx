@@ -87,14 +87,14 @@ export const JivemVNijnemVK = () => {
                         </button>
                     </div>
                 </div>
-                <div className={styles.tablesContainer}>
+                <div className={styles.tablesContainer} ref={audienceRef}>
                     <div className={styles.tablesTitle}>
                         Живём в Нижнем это новое интернет-СМИ. Освещаем
                         городские события и новости федерального масштаба, а
                         также обращаемся к эстетике города и его культурной
                         жизни.
                     </div>
-                    <div className={styles.tableContainer} ref={audienceRef}>
+                    <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Аудитория</div>
                         <div className={styles.audienceTable}>
                             <div className={styles.audienceTableContent}>

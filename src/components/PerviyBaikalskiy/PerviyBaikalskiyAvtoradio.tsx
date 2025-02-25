@@ -80,11 +80,11 @@ export const PerviyBaikalskiyAvtoradio = () => {
                         </button>
                     </div>
                 </div>
-                <div className={styles.tablesContainer}>
+                <div className={styles.tablesContainer} ref={statsRef}>
                     <div className={styles.tablesTitle}>
                         Важнейшая информация о Байкале, экологии, туризме
                     </div>
-                    <div className={styles.tableContainer} ref={statsRef}>
+                    <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Аудитория</div>
                         <div className={styles.audienceTable}>
                             <div className={styles.audienceTableContent}>

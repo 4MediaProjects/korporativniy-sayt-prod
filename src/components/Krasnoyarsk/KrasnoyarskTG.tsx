@@ -94,12 +94,12 @@ export const KrasnoyarskTG = () => {
                         </button>
                     </div>
                 </div>
-                <div className={styles.tablesContainer}>
+                <div className={styles.tablesContainer} ref={statisticsRef}>
                     <div className={styles.tablesTitle}>
                         «Прима» — самые актуальные и интересные события
                         Красноярска и края.
                     </div>
-                    <div className={styles.tableContainer} ref={statisticsRef}>
+                    <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Статистика</div>
                         <div className={styles.table}>
                             <div className={styles.tableRow}>

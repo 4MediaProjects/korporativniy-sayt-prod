@@ -102,7 +102,7 @@ export const IrkutskTV = () => {
                     </div>
                 </div>
 
-                <div className={styles.tablesContainer}>
+                <div className={styles.tablesContainer} ref={audienceRef}>
                     <div className={styles.tablesTitle}>
                         Новости, сюжеты, передачи, интервью, прогноз погоды,
                         реклама, фильмы и сериалы (обязательный общедоступный
@@ -110,7 +110,7 @@ export const IrkutskTV = () => {
                         ежедневным круглосуточным вещанием)
                     </div>
 
-                    <div className={styles.tableContainer} ref={audienceRef}>
+                    <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Аудитория</div>
                         <div className={styles.audienceTable}>
                             <div className={styles.audienceTableContent}>

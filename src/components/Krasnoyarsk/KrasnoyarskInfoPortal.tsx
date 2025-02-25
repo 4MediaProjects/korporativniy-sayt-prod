@@ -94,13 +94,13 @@ export const KrasnoyarskInfoPortal = () => {
                         </button>
                     </div>
                 </div>
-                <div className={styles.tablesContainer}>
+                <div className={styles.tablesContainer} ref={audienceRef}>
                     <div className={styles.tablesTitle}>
                         “ГородПрима” - городской портал о Красноярске и
                         окрестностях. Новости об общественно-культурной жизни
                         мегаполиса
                     </div>
-                    <div className={styles.tableContainer} ref={audienceRef}>
+                    <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Аудитория</div>
                         <div className={styles.audienceTable}>
                             <div className={styles.audienceTableContent}>

@@ -95,14 +95,14 @@ export const KrasnoyarskVK = () => {
                         </button>
                     </div>
                 </div>
-                <div className={styles.tablesContainer}>
+                <div className={styles.tablesContainer} ref={statisticsRef}>
                     <div className={styles.tablesTitle}>
                         Сообщество с главными новостями города и региона.
                         Авторские материалы, яркие городские события,
                         собственные сюжеты, а также большой упор на визуальную
                         составляющую - оформление публикаций в фирменном стиле.
                     </div>
-                    <div className={styles.tableContainer} ref={statisticsRef}>
+                    <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Аудитория</div>
                         <div className={styles.audienceTable}>
                             <div className={styles.audienceTableContent}>

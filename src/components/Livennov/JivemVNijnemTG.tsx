@@ -87,12 +87,12 @@ export const JivemVNijnemTG = () => {
                         </button>
                     </div>
                 </div>
-                <div className={styles.tablesContainer}>
+                <div className={styles.tablesContainer} ref={statsRef}>
                     <div className={styles.tablesTitle}>
                         Главные новости Нижнего Новгорода
                     </div>
 
-                    <div className={styles.tableContainer} ref={statsRef}>
+                    <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Статистика</div>
                         <div className={styles.table}>
                             <div className={styles.tableRow}>

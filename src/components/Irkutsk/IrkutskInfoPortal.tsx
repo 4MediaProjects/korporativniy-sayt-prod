@@ -94,13 +94,16 @@ export const IrkutskInfoPortal = () => {
                         <button className={styles.orangeButton}>
                             К порталу
                         </button>
-                        <button className={styles.reverseOrangeButton}>
+                        <button
+                            className={styles.reverseOrangeButton}
+                            ref={tableRef}
+                        >
                             Заказать рекламу
                         </button>
                     </div>
                 </div>
 
-                <div className={styles.tablesContainer} ref={tableRef}>
+                <div className={styles.tablesContainer}>
                     <div className={styles.tablesTitle}>
                         Жизнь региона в режиме онлайн: информационное агентство
                         (тематика: информационный, региональный) соцсети издания

@@ -87,7 +87,7 @@ export const JivemVNijnemInfoPortal = () => {
                         </button>
                     </div>
                 </div>
-                <div className={styles.tablesContainer}>
+                <div className={styles.tablesContainer} ref={audienceRef}>
                     <div className={styles.tablesTitle}>
                         "Живем в Нижнем" - информационный портал с самыми
                         актуальными новостями Нижнего Новгорода и Нижегородской
@@ -95,7 +95,7 @@ export const JivemVNijnemInfoPortal = () => {
                         посетителей
                     </div>
 
-                    <div className={styles.tableContainer} ref={audienceRef}>
+                    <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Аудитория</div>
                         <div className={styles.audienceTable}>
                             <div className={styles.audienceTableContent}>

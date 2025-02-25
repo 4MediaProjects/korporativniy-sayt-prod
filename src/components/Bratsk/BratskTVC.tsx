@@ -145,11 +145,11 @@ export const BratskTVC = () => {
                         Основной выпуск: «Новости БСТ» (БСТ24) в 19:00 – 13566
                         зрителей, Всего за сутки 8 выпусков - 29024 зрителя
                     </div>
-                    <div className={styles.tablesTitle}>
+                    <div className={styles.tablesTitle} ref={statsRef}>
                         Программа входит в ТОП-20 самых цитируемых СМИ Иркутской
                         области (Медиалогия)
                     </div>
-                    <div className={styles.tableContainer} ref={statsRef}>
+                    <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Аудитория</div>
                         <div className={styles.audienceTable}>
                             <div className={styles.audienceTableContent}>

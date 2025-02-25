@@ -95,7 +95,7 @@ export const KrasnoyarskRadio = () => {
                         </button>
                     </div>
                 </div>
-                <div className={styles.tablesContainer}>
+                <div className={styles.tablesContainer} ref={viewerReachRef}>
                     <div className={styles.tablesTitle}>
                         Одна из старейших частных радиостанций края, основана в
                         1994 году. Радиостанция является единственной со 100%
@@ -112,7 +112,7 @@ export const KrasnoyarskRadio = () => {
                         Одной из программ, являющейся визитной карточкой эфира -
                         является утреннее шоу “Зажигание”.
                     </div>
-                    <div className={styles.tableContainer} ref={viewerReachRef}>
+                    <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Аудитория</div>
                         <div className={styles.audienceTable}>
                             <div className={styles.audienceTableContent}>

@@ -99,13 +99,13 @@ export const AbakanInfoPortal = () => {
                         </button>
                     </div>
                 </div>
-                <div className={styles.tablesContainer}>
+                <div className={styles.tablesContainer} ref={statsRef}>
                     <div className={styles.tablesTitle}>
                         Портал ctv7.ru - крупнейший новостной интернет-ресурс
                         Хакасии. Оперативная и актуальная информация о жизни Юга
                         Сибири.
                     </div>
-                    <div className={styles.tableContainer} ref={statsRef}>
+                    <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Аудитория</div>
                         <div className={styles.audienceTable}>
                             <div className={styles.audienceTableContent}>

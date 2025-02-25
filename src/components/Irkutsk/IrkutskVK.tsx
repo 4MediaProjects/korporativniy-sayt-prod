@@ -102,7 +102,7 @@ export const IrkutskVK = () => {
                     </div>
                 </div>
 
-                <div className={styles.tablesContainer}>
+                <div className={styles.tablesContainer} ref={audienceRef}>
                     <div className={styles.tablesTitle}>
                         «НТС» (Новое Телевидение Сибири) - социальная сеть
                         обязательного общедоступного канала Иркутска и Иркутской
@@ -111,7 +111,7 @@ export const IrkutskVK = () => {
                         телевизионных сюжетов
                     </div>
 
-                    <div className={styles.tableContainer} ref={audienceRef}>
+                    <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Аудитория</div>
                         <div className={styles.audienceTable}>
                             <div className={styles.audienceTableContent}>
