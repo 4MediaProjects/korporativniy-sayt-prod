@@ -5,10 +5,9 @@
   padding: 20px;
   background: #f0f0f0;
   position: relative;
-  width: 100%;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
 }
 
 .logo {
@@ -33,7 +32,7 @@
 
 @media (max-width: 768px) {
   .header {
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
     padding: 15px 10px;
   }
@@ -53,3 +52,74 @@
     margin-right: 0;
   }
 }
+
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+
+
+  .burgerLine {
+    width: 30px;
+    height: 3px;
+    background: #000;
+    margin: 4px 0;
+  }
+}
+
+.mobileMenu {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background: #f0f0f0;
+  position: fixed; // Меню фиксировано
+  top: 0; // С 0 до конца высоты вьюпорта
+  right: 0; // Выезжает справа
+  width: 80vw; // Ширина 80% от вьюпорта
+  height: 100vh; // Занимает всю высоту вьюпорта
+  padding: 20px; // Отступы внутри меню
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2); // Тень для эффекта
+  transition: transform 0.3s ease; // Плавный переход
+  transform: translateX(100%); // Исходное положение - за пределами экрана
+}
+
+.mobileMenu.active {
+  transform: translateX(0); // Позиция при открытии
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  .links {
+    display: none; // Скрываем обычные ссылки на мобильных
+  }
+}
+
+.mobileLinkList{
+  margin-top:50px;
+  display: flex;
+  flex-direction: column;
+  gap:20px
+}
+
+.link{
+  color: #000000;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.closeButton {
+  background: transparent;
+  border: none;
+  font-size: 44px;
+  color: #000;
+  cursor: pointer;
+  position: absolute; // Позиционируем кнопку в верхнем углу меню
+  top: 20px; // Отступ сверху
+  right: 20px; // Отступ справа
+  z-index: 1; // Чтобы кнопка была над остальными элементами
+}
+
+

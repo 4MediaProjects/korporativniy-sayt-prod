@@ -1,6 +1,8 @@
 import styles from './MainPageBody.module.scss';
 import ProjectsList from '../../ProjectsList';
 import { useNavigate } from 'react-router-dom';
+import { FormModal } from '../../../../../widgets/ui/FormModal';
+import { useState } from 'react';
 const projects = [
     {
         imageName: 'jivemVnijnem',
@@ -121,13 +123,22 @@ const projects = [
 ];
 export const MainPageBody = () => {
     const navigate = useNavigate();
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const openModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setIsModalOpen(false);
+    };
     return (
         <div className={styles.container}>
+            <FormModal isOpen={isModalOpen} onClose={closeModal} />
             <div>
                 <div className={styles.formediaBlockContainer}>
                     <div className={styles.mainTextBlock}>
                         <div className={styles.mainText}>ФорМедиа</div>
-
                         <div className={styles.secondaryText}>
                             Региональный медиахолдинг
                         </div>
@@ -136,18 +147,16 @@ export const MainPageBody = () => {
                                 крупнейшая медийная компания, объединяющая
                                 четыре основных медиа-ресурса
                             </div>
-
                             <div className={styles.buttonList}>
                                 <button
                                     className={styles.orangeButton}
-                                    onClick={() => navigate('/blank')}
+                                    onClick={openModal}
                                 >
                                     Медиакит
                                 </button>
-
                                 <button
                                     className={styles.reverseOrangeButton}
-                                    onClick={() => navigate('/blank')}
+                                    onClick={openModal}
                                 >
                                     Реклама
                                 </button>

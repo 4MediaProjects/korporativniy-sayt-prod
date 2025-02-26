@@ -80,7 +80,7 @@ export const JivemVNijnemVK = () => {
                     />
                     <div className={styles.buttonList}>
                         <button className={styles.orangeButton}>
-                            К группе
+                            К порталу
                         </button>
                         <button className={styles.reverseOrangeButton}>
                             Заказать рекламу
