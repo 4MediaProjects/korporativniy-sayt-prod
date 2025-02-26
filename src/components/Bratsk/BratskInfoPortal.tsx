@@ -133,9 +133,9 @@ export const BratskInfoPortal = () => {
                 </div>
                 <div className={styles.tablesContainer}>
                     <div className={styles.tablesTitle}>
-                        Портал БСТ - информационный портал Братска и Иркутской
-                        области. Входит в топ 5  самых цитируемых СМИ Иркутской
-                        области (по данным Медиалогии за I квартал 2024г.)
+                        В нашем составе — телеканал БСТ24, радио Европа плюс
+                        Братск и «Шансон в Братске». Сегодня БСТ 24 — это канал
+                        с круглосуточным вещанием и 100 % программированием.
                     </div>
                     <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Аудитория</div>

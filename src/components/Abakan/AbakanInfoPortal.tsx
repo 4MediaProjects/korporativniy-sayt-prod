@@ -101,9 +101,9 @@ export const AbakanInfoPortal = () => {
                 </div>
                 <div className={styles.tablesContainer} ref={statsRef}>
                     <div className={styles.tablesTitle}>
-                        Портал ctv7.ru - крупнейший новостной интернет-ресурс
-                        Хакасии. Оперативная и актуальная информация о жизни Юга
-                        Сибири.
+                        Медиагруппа «Юг Сибири» — крупнейший независимый
+                        медиахолдинг в Республике Хакасия и на юге Красноярского
+                        края
                     </div>
                     <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Аудитория</div>

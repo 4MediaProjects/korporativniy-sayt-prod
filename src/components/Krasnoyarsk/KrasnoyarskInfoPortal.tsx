@@ -96,9 +96,11 @@ export const KrasnoyarskInfoPortal = () => {
                 </div>
                 <div className={styles.tablesContainer} ref={audienceRef}>
                     <div className={styles.tablesTitle}>
-                        “ГородПрима” - городской портал о Красноярске и
-                        окрестностях. Новости об общественно-культурной жизни
-                        мегаполиса
+                        «Город Прима» - городской портал о Красноярске и
+                        Красноярском крае. Полная картина новостей Красноярска и
+                        Красноярского края ежедневно. Самая подробная афиша всех
+                        культурных мероприятий города. Интервью с красноярцами,
+                        большой гид по ресторанам, кафе и музеям.
                     </div>
                     <div className={styles.tableContainer}>
                         <div className={styles.tableTitle}>Аудитория</div>
