@@ -31,8 +31,8 @@ export const KubanInfoPortal = () => {
                 <img
                     src={
                         isMobile
-                            ? '/blankBackground.svg'
-                            : '/blankBackground.svg'
+                            ? '/kubanBackground.jpg'
+                            : '/kubanBackground.jpg'
                     }
                     alt="blankBackground"
                     className={styles.headerImage}
