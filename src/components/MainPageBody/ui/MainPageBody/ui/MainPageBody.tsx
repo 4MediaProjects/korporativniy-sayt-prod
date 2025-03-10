@@ -108,18 +108,6 @@ const projects = [
         buttonText: 'подробнее',
         buttonLink: '/blank',
     },
-    {
-        header: 'Спецпроект',
-        secondaryText: 'Прима продакшен',
-        linksList: [
-            { href: '/blank', text: 'Интернет-портал' },
-            { href: '/blank', text: 'ТВ' },
-            { href: '/blank', text: 'Радио' },
-            { href: '/blank', text: 'Социальные сети' },
-        ],
-        buttonText: 'подробнее',
-        buttonLink: '/blank',
-    },
 ];
 export const MainPageBody = () => {
     const navigate = useNavigate();

@@ -33,8 +33,8 @@ export const KrasnoyarskTV = () => {
                 <img
                     src={
                         isMobile
-                            ? '/blankBackground.svg'
-                            : '/blankBackground.svg'
+                            ? '/primaBackground.jpg'
+                            : '/primaBackground.jpg'
                     }
                     alt="blankBackground"
                     className={styles.headerImage}
@@ -82,7 +82,7 @@ export const KrasnoyarskTV = () => {
                         Телеканал “ПРИМА”
                     </div>
                     <img
-                        src={`/blankImage.svg`}
+                        src={`/primaMainPicture.png`}
                         alt="blankImage"
                         className={styles.image}
                     />

@@ -56,8 +56,8 @@ export const KubanInfoPortal = () => {
                         Информационный портал «Кубань Информ»
                     </div>
                     <img
-                        src={`/blankImage.svg`}
-                        alt="blankImage"
+                        src={`/kubanMainPicture.jpg`}
+                        alt="kubanMainPicture"
                         className={styles.image}
                     />
                     <div className={styles.buttonList}>

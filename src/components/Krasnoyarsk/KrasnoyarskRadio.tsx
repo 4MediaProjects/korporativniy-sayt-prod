@@ -33,8 +33,8 @@ export const KrasnoyarskRadio = () => {
                 <img
                     src={
                         isMobile
-                            ? '/blankBackground.svg'
-                            : '/blankBackground.svg'
+                            ? '/primaBackground.jpg'
+                            : '/primaBackground.jpg'
                     }
                     alt="blankBackground"
                     className={styles.headerImage}
@@ -82,7 +82,7 @@ export const KrasnoyarskRadio = () => {
                         Радио “Красноярск Главный”
                     </div>
                     <img
-                        src={`/blankImage.svg`}
+                        src={`/primaMainPicture.png`}
                         alt="blankImage"
                         className={styles.image}
                     />
