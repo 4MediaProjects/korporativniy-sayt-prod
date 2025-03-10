@@ -18,7 +18,7 @@ export const KrasnoyarskTG = () => {
     }, []);
 
     useEffect(() => {
-        if (statisticsRef.current) {
+        if (statisticsRef.current && isMobile) {
             statisticsRef.current.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start',

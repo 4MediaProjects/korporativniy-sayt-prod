@@ -18,7 +18,7 @@ export const IrkutskAvtoradio = () => {
     }, []);
 
     useEffect(() => {
-        if (audienceRef.current) {
+        if (audienceRef.current && isMobile) {
             audienceRef.current.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start',

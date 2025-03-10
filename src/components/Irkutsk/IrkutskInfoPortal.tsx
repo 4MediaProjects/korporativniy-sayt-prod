@@ -18,7 +18,7 @@ export const IrkutskInfoPortal = () => {
     }, []);
 
     useEffect(() => {
-        if (tableRef.current) {
+        if (tableRef.current && isMobile) {
             tableRef.current.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start',

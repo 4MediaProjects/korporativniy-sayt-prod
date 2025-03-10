@@ -18,7 +18,7 @@ export const JivemVNijnemTG = () => {
     }, []);
 
     useEffect(() => {
-        if (statsRef.current) {
+        if (statsRef.current && isMobile) {
             statsRef.current.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start',

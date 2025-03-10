@@ -17,7 +17,7 @@ export const Bratsk24 = () => {
         return () => window.removeEventListener('resize', handleResize);
     }, []);
     useEffect(() => {
-        if (statsRef.current) {
+        if (statsRef.current && isMobile) {
             statsRef.current.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start',

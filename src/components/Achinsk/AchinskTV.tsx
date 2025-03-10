@@ -19,7 +19,7 @@ export const AchinskTV = () => {
     }, []);
 
     useEffect(() => {
-        if (viewerReachRef.current) {
+        if (viewerReachRef.current && isMobile) {
             viewerReachRef.current.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start',
