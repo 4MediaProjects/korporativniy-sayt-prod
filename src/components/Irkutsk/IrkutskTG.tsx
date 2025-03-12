@@ -30,8 +30,12 @@ export const IrkutskTG = () => {
         <div className={styles.container}>
             <div className={styles.headerContainer}>
                 <img
-                    src="/blankBackground.svg"
-                    alt="blankBackground"
+                    src={
+                        isMobile
+                            ? '/IrkutskBackground.jpg'
+                            : '/IrkutskBackground.jpg'
+                    }
+                    alt="IrkutskBackground"
                     className={styles.headerImage}
                 />
                 <div className={styles.headerOverlay}>
@@ -84,8 +88,8 @@ export const IrkutskTG = () => {
                         Телеграм-канал НТС
                     </div>
                     <img
-                        src="/blankImage.svg"
-                        alt="blankImage"
+                        src={`/irkutskMainPicture.png`}
+                        alt="irkutskMainPicture"
                         className={styles.image}
                     />
                     <div className={styles.buttonList}>

@@ -32,10 +32,10 @@ export const IrkutskInfoPortal = () => {
                 <img
                     src={
                         isMobile
-                            ? '/blankBackground.svg'
-                            : '/blankBackground.svg'
+                            ? '/IrkutskBackground.jpg'
+                            : '/IrkutskBackground.jpg'
                     }
-                    alt="blankBackground"
+                    alt="IrkutskBackground"
                     className={styles.headerImage}
                 />
                 <div className={styles.headerOverlay}>
@@ -86,8 +86,8 @@ export const IrkutskInfoPortal = () => {
                 <div className={styles.cardImageButtonsContainer}>
                     <div className={styles.cardImageButtonsTitle}>Сайт НТС</div>
                     <img
-                        src={`/blankImage.svg`}
-                        alt="blankImage"
+                        src={`/irkutskMainPicture.png`}
+                        alt="irkutskMainPicture"
                         className={styles.image}
                     />
                     <div className={styles.buttonList}>

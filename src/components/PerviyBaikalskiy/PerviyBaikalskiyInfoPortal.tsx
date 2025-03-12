@@ -30,10 +30,10 @@ export const PerviyBaikalskiyInfoPortal = () => {
                 <img
                     src={
                         isMobile
-                            ? '/blankBackground.svg'
-                            : '/blankBackground.svg'
+                            ? '/perviyBaikalskiyBackground.jpg'
+                            : '/perviyBaikalskiyBackground.jpg'
                     }
-                    alt="blankBackground"
+                    alt="perviyBaikalskiyBackground"
                     className={styles.headerImage}
                 />
                 <div className={styles.headerOverlay}>
@@ -67,8 +67,8 @@ export const PerviyBaikalskiyInfoPortal = () => {
                         Информационный потал «Первый Байкальский»
                     </div>
                     <img
-                        src={`/blankImage.svg`}
-                        alt="blankImage"
+                        src={`/perviyBaikalskiyMainPicture.png`}
+                        alt="perviyBaikalskiyMainPicture"
                         className={styles.image}
                     />
                     <div className={styles.buttonList}>
