@@ -115,8 +115,8 @@ export const BratskVK = () => {
                         Группа ВК «БСТ»
                     </div>
                     <img
-                        src="/blankImage.svg"
-                        alt="blankImage"
+                        src={`/bratskTV.png`}
+                        alt="bratskTV"
                         className={styles.image}
                     />
                     <div className={styles.buttonList}>
