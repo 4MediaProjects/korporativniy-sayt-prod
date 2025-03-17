@@ -31,10 +31,10 @@ export const AbakanRadio = () => {
                 <img
                     src={
                         isMobile
-                            ? '/blankBackground.svg'
-                            : '/blankBackground.svg'
+                            ? '/yugSibiriBackground.jpg'
+                            : '/yugSibiriBackground.jpg'
                     }
-                    alt="blankBackground"
+                    alt="yugSibiriBackground"
                     className={styles.headerImage}
                 />
                 <div className={styles.headerOverlay}>
@@ -86,8 +86,8 @@ export const AbakanRadio = () => {
                         Радио «Сибирь»
                     </div>
                     <img
-                        src={`/blankImage.svg`}
-                        alt="blankImage"
+                        src={`/yugSibiriMainPicture.jpg`}
+                        alt="yugSibiriMainPicture"
                         className={styles.image}
                     />
                     <div className={styles.buttonList}>

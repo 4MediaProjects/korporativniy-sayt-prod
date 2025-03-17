@@ -21,8 +21,8 @@ export const BlankPage = () => {
                 <img
                     src={
                         isMobile
-                            ? '/blankBackground.svg'
-                            : '/blankBackground.svg'
+                            ? '/blankBackground.jpg'
+                            : '/blankBackground.jpg'
                     }
                     alt="blankBackground"
                     className={styles.headerImage}
@@ -46,7 +46,7 @@ export const BlankPage = () => {
                         Информационный портал
                     </div>
                     <img
-                        src={`/blankImage.svg`}
+                        src={`/blankImage.jpg`}
                         alt="blankImage"
                         className={styles.image}
                     />

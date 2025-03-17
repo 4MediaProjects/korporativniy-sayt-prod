@@ -31,10 +31,10 @@ export const AbakanInfoPortal = () => {
                 <img
                     src={
                         isMobile
-                            ? '/blankBackground.svg'
-                            : '/blankBackground.svg'
+                            ? '/yugSibiriBackground.jpg'
+                            : '/yugSibiriBackground.jpg'
                     }
-                    alt="blankBackground"
+                    alt="yugSibiriBackground"
                     className={styles.headerImage}
                 />
                 <div className={styles.headerOverlay}>
@@ -86,8 +86,8 @@ export const AbakanInfoPortal = () => {
                         Информационный портал «CTV7»
                     </div>
                     <img
-                        src={`/blankImage.svg`}
-                        alt="blankImage"
+                        src={`/yugSibiriMainPicture.jpg`}
+                        alt="yugSibiriMainPicture"
                         className={styles.image}
                     />
                     <div className={styles.buttonList}>
