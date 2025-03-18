@@ -1,0 +1,16 @@
+.container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  a{
+    text-decoration: none;
+    color: gray;
+  }
+  a:hover{
+
+    color: #EB721D;
+  }
+}

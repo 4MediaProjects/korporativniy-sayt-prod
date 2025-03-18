@@ -372,3 +372,29 @@
   font-weight: 400;
   line-height: 21.6px;
 }
+
+.personalDataTableContainer{
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  border-right: none;
+  border-bottom: none;
+}
+.personalDataTableRow{
+  display: flex;
+  flex-direction: row;
+}
+.personalDataTableCell{
+  border-right: 1px solid black;
+  border-bottom: 1px solid black;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  @media (max-width: 768px) {
+    width: 135px;
+  }
+}

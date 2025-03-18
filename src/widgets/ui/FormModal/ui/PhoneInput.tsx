@@ -1,18 +1,22 @@
-import { useState } from 'react';
+import { SetStateAction, useState } from 'react';
 import PhoneInput from 'react-phone-input-2';
 import 'react-phone-input-2/lib/style.css';
 import styles from './FormModal.module.scss';
 
-const CustomPhoneInput = () => {
-    const [phone, setPhone] = useState('');
-
+const CustomPhoneInput = ({
+    value,
+    onChange,
+}: {
+    value: any;
+    onChange: SetStateAction<any>;
+}) => {
     return (
         <div className={styles.textfield}>
             <label>Рабочий телефон</label>
             <PhoneInput
                 country={'ru'}
-                value={phone}
-                onChange={setPhone}
+                value={value}
+                onChange={onChange}
                 inputStyle={{
                     width: '100%',
                     padding: '10px 50px',

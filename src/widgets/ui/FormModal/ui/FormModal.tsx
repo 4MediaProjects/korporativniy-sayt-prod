@@ -11,9 +11,8 @@ export const FormModal = ({ isOpen, onClose }) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Обработка отправки формы
         console.log({ companyName, directorName, phone, email, request });
-        onClose(); // Закрыть форму после отправки
+        onClose();
     };
 
     return (
@@ -51,7 +50,7 @@ export const FormModal = ({ isOpen, onClose }) => {
                                 className={styles.textInput}
                             />
                         </div>
-                        <CustomPhoneInput />
+                        <CustomPhoneInput value={phone} onChange={setPhone} />
                         <div className={styles.textfield}>
                             <label>E-mail</label>
                             <input
@@ -76,10 +75,7 @@ export const FormModal = ({ isOpen, onClose }) => {
                         <button type="submit">Отправить</button>
                         <p>
                             Отправляя данные, вы соглашаетесь с{' '}
-                            <a
-                                className={styles.link}
-                                href="https://drive.google.com/file/d/1We8xIc-OoEnSGnEEl7eXKw2KCy3vONLf/view"
-                            >
+                            <a className={styles.link} href="/personal-data">
                                 политикой конфиденциальности.
                             </a>
                         </p>

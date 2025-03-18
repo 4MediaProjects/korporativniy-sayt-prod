@@ -40,6 +40,8 @@ import { PerviyBaikalskiyInfoPortal } from './components/PerviyBaikalskiy/Perviy
 import { PerviyBaikalskiyAvtoradio } from './components/PerviyBaikalskiy/PerviyBaikalskiyAvtoradio';
 import { PerviyBaikalskiyShanson } from './components/PerviyBaikalskiy/PerviyBaikalskiyShanson';
 import { KubanInfoPortal } from './components/Kuban/KubanInfoPortal';
+import { PersonalData } from './components/PersonalData/PersonalData';
+import { Footer } from './widgets/Footer';
 
 function App() {
     return (
@@ -139,9 +141,11 @@ function App() {
                     path="/kuban/info-portal"
                     element={<KubanInfoPortal />}
                 />
+                <Route path="/personal-data" element={<PersonalData />} />
                 <Route path="*" element={<Navigate to="/" />} />
                 <Route path="/blank" element={<BlankPage />} />
             </Routes>
+            <Footer />
         </div>
     );
 }
